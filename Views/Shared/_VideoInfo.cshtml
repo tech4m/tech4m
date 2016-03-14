@@ -1,0 +1,132 @@
+﻿@model  tech4mEntity.Video
+<div class="row">
+    <!-- Center colunm-->
+    <div class="center_column col-xs-12 col-sm-12" id="center_column">
+        <!-- Product -->
+        <div id="product">
+            <div class="primary-box row">
+                <div class="pb-left-column col-xs-12 col-sm-6">
+                    <!-- product-imge-->
+                    <div class="product-image">
+                        <div class="product-full">
+                            <div id="videobox"><iframe width="510px" height="300px" frameborder="0" allowfullscreen="" src="http://www.youtube.com/embed/@Model.VideoURL?rel=0" "360" ="" "640" =""></iframe></div>
+                        </div>
+                    </div>
+                    <!-- product-imge-->
+                </div>
+                <div class="pb-right-column col-xs-12 col-sm-6 border-right">
+                    <h2 class="product-name">@Model.VideoName</h2>
+                    <div class="comments-advices">
+                        <div id="author">
+                            <strong>Author:</strong>
+
+                            <a href="http://www.buybooksindia.com/adam-freeman-books-a139610.php" id="139610" style="text-decoration: none"><h3>@Model.VideoOwner</h3></a>
+                        </div>
+                        <div id="publisher">
+                            <strong>Publisher:</strong>
+                            <a href="http://www.buybooksindia.com/ingram-publisher-services-books-r118734.php" style="text-decoration:none"><h3>@Model.VideoOwner</h3></a>
+                        </div>
+                    </div>
+                    <div class="product-price-group">
+                        <span class="price"><span class="rupee">Rs</span>@Model.VideoStatus</span>
+                    </div>
+                    <div class="info-orther">
+                        <p>Availability: <span class="in-stock">Available</span></p>
+                        <p>Usually ships in: <span class="in-stock">14-21 business days</span></p>
+                        <p><font color="green">Imported Edition</font></p>
+                        (Free Delivery)<br><br>
+                    </div>
+                    <div class="btn-add-cart"><a product-id="50086663" class="add-to-carta" href="http://www.buybooksindia.com/add-to-cart.php?pid=50086663" title="Buy Now">Buy Now</a>
+                    <a href="http://www.facebook.com/sharer.php?u=http://c-sharp-corner.blogspot.in/2012/06/social-share-buttons-in-aspnet.html" title="share on facebook">Click to share on facebook</a>
+                        <a href="http://twitter.com/share?url=http://c-sharp-corner.blogspot.in/2012/06/social-share-buttons-in-aspnet.html&text=something&via=c-sharp-corner" title="share on twitter">Click to share on twitter</a>
+
+                    </div>								<!---------------------- Notify Code Place here -------------------->
+                    <div style="display: block;" id="checkDeliveryFacebox">
+                        <div id="note_error" class="successMessage" style="border:0px solid red;margin-top:10px;margin-bottom:5px"></div>
+
+                        <div class="left-sec-btn"> </div>
+                    </div>
+                </div>
+                @*<div class="pb-right-column col-xs-12 col-sm-4">
+                        <div><strong>We Accept</strong></div>
+                        <div><img class="img-responsive" alt="payment logo" src="~/images/payment-logo.jpg"></div>
+                        <div>&nbsp;</div>
+                        <div><strong>Check delivery information</strong></div>
+                        <form action="#" method="post" id="checkDeliveryForm">
+                            <div id="pincode">
+                                <input name="pincode" id="pin" class="input" placeholder="ENTER PINCODE" maxlength="6" onkeyup="pincodeonly(pin);" type="text">
+                                <input name="productsource" id="productsource" value="5" type="hidden">
+                                <input name="cmd" id="cmd" class="notify_me" value="Check" onclick="checkDelivery();" type="button">
+                            </div>
+
+                            <a style="display: none;" id="checkDeliveryFacebox"></a>
+                            <div id="pin_error" class="errorMessage"></div>
+                        </form>
+                    </div>*@
+            </div>
+            <!-- tab product -->
+            <div class="product-tab">
+                <ul class="nav-tab">
+                    <li class="active">
+                        <a aria-expanded="false" data-toggle="tab" href="#product-detail">Product Specifications</a>
+                    </li>
+                    <li>
+                        <a aria-expanded="true" data-toggle="tab" href="#information">information</a>
+                    </li>
+                </ul>
+                <div class="tab-container">
+                    <div id="product-detail" class="tab-panel active">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td width="200">Publisher</td>
+                                    <td><a href="http://www.buybooksindia.com/ingram-publisher-services-books-r118734.php"><h3>Ingram Publisher Services</h3></a></td>
+                                </tr>
+                                @*<tr>
+                                    <td>Publication Year</td>
+                                    <td>@Model.BookPublishedDate</td>
+                                </tr>
+                                <tr>
+                                    <td>ISBN-13</td>
+                                    <td><h4>@Model.BookISBN</h4></td>
+                                </tr>
+                                <tr>
+                                    <td>ISBN-10</td>
+                                    <td>@Model.BookISBN</td>
+                                </tr>
+                                <tr>
+                                    <td>Binding</td>
+                                    <td><h4>Paperback</h4></td>
+                                </tr>
+                                <tr>
+                                    <td>Edition</td>
+                                    <td>5th Revised edition</td>
+                                </tr>
+                                <tr>
+                                    <td>Number of Pages</td>
+                                    <td>@Model.BookPageCount Pages</td>
+                                </tr>
+                                <tr>
+                                    <td>Subject</td>
+                                    <td><h4>Web programming</h4></td>
+                                </tr>*@
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="information" class="tab-panel">
+                      @Model.VideoDescription
+                    </div>
+                </div>
+                <!-- ./tab product -->
+                <!-- box product -->
+
+            </div>
+
+            <!-- Product -->
+        </div>
+
+        <!-- ./ Center colunm -->
+    </div>
+    <!-- ./row-->
+
+</div>

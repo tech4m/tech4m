@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8f90f507-5105-4e2a-ae17-dedacb05facb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:38729/Tech4mService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Tech4mService.disco" MetadataType="Disco" ID="d1b5fbb9-628c-42b8-b180-77f036fda7e2" SourceId="1" SourceUrl="http://localhost:38729/Tech4mService.svc?disco" />
+    <MetadataFile FileName="Tech4mService.xsd" MetadataType="Schema" ID="e729bdf5-a01f-47a9-81f9-e3a6d0273287" SourceId="1" SourceUrl="http://localhost:38729/Tech4mService.svc?xsd=xsd0" />
+    <MetadataFile FileName="Tech4mService.wsdl" MetadataType="Wsdl" ID="55add690-d9b4-4e49-9cf0-9569d4456671" SourceId="1" SourceUrl="http://localhost:38729/Tech4mService.svc?wsdl" />
+    <MetadataFile FileName="Tech4mService1.xsd" MetadataType="Schema" ID="2f6d3c97-7e2f-4d98-9e83-1ca8a8954d46" SourceId="1" SourceUrl="http://localhost:38729/Tech4mService.svc?xsd=xsd1" />
+    <MetadataFile FileName="Tech4mService2.xsd" MetadataType="Schema" ID="ce57dfba-e569-4b78-bf0d-ed4ca083ac34" SourceId="1" SourceUrl="http://localhost:38729/Tech4mService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

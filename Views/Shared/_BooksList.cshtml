@@ -1,0 +1,434 @@
+﻿@model  List<tech4mEntity.Book>
+<div class="row">
+    <!-- left colunm -->
+    <!-- ./left colunm -->
+    <!-- Center colunm-->
+    <div class="center_column col-xs-12 col-sm-12" id="center_column">
+        <!-- category-slider -->
+        <!-- ./category-slider -->
+        <!-- view-product-list-->
+        <div id="view-product-list" class="view-product-list">
+            <h2 class="page-heading">
+                <span class="page-heading-title">
+                    Computer Certification: Microsoft (eg Mcse) Books 123
+                </span>
+
+            </h2>
+            <div class="sort-by pull-right">
+                <form action="" method="GET">
+                    <label style="color:#f14609; margin-right:10px; margin-top:5px">Sort by :</label>
+                    <select name="sortPrice" id="sort-dropdown" style="padding:3px; border:1px solid #ddd">
+                        <option value="" selected="selected">All</option>
+                        <option value="discount">Discount</option>
+                        <option value="low-to-high">Price -- Low to High</option>
+                        <option value="high-to-low">Price -- High to Low</option>
+                    </select>
+                </form>
+            </div>
+
+            <!-- <ul class="display-product-option">
+                <li class="view-as-grid selected">
+                    <span>grid</span>
+                </li>
+                <li class="view-as-list">
+                    <span>
+
+                    </span>
+                </li>
+            </ul> ->
+            <!-- PRODUCT LIST -->
+            <div id="loading_div" style="padding-top: 50px; display: none;" align="center"><img src="~/images/loader.gif"><br>Loading, please wait...</div>
+            <div class="display-view">
+
+                <div id="bookdata">
+                    <div class="bookdata">
+                        <ul class="row product-list grid">
+                            @foreach (tech4mEntity.Book obj in Model)
+                            {
+
+                                <li class="col-sx-12 col-sm-2">
+                                    <div class="product-container">
+                                        <div class="left-block">
+                                            <a href="~/Book/BookById?bookId=@obj.BookId">
+                                                <img class="img-responsive" src="@obj.BookThumbnail" alt="@obj.BookTitle" title="@obj.BookTitle" border="0" height="200px" width="135px">
+                                            </a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart"><a product-id="228907" class="add-to-carta" href="http://www.buybooksindia.com/add-to-cart.php?pid=228907" title="Buy Now">Buy Now</a></div>
+                                        </div>
+                                        <div class="right-block">
+                                            <div class="product-name"><a href="~/Book/BookById?bookId=@obj.BookId" title="@obj.BookTitle"><h2>@obj.BookTitle</h2></a></div>
+                                            <div class="content_price">
+                                                <span class="price product-price"><span class="rupee">Rs</span>@obj.BookPrice</span>
+                                                @*<span class="price old-price"><span class="rupee">Rs</span>936</span>*@
+                                            </div>
+                                            <div class="info-orther">
+                                                <p class="availability">Availability: <span>Available</span></p>
+                                                <div class="product-desc">
+
+                                                </div>
+                                            </div>                                <div class="price-percent-reduction3">
+                                                20%<br> OFF
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            }
+                            @*<li class="col-sx-12 col-sm-2">
+                                    <div class="product-container">
+                                        <div class="left-block">
+                                            <a href="http://www.buybooksindia.com/designer-s-guide-to-color-4-v-4--9780811857093-228908.htm">
+                                                <img class="img-responsive" src="~/images/image_016.jpg" alt="DESIGNER'S GUIDE TO COLOR 4 (V. 4)" title="DESIGNER'S GUIDE TO COLOR 4 (V. 4)" border="0" height="200px" width="135px">
+                                            </a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart"><a product-id="228908" class="add-to-carta" href="http://www.buybooksindia.com/add-to-cart.php?pid=228908" title="Buy Now">Buy Now</a></div>
+                                        </div>
+                                        <div class="right-block">
+                                            <div class="product-name"><a href="http://www.buybooksindia.com/designer-s-guide-to-color-4-v-4--9780811857093-228908.htm" title="DESIGNER'S GUIDE TO COLOR 4 (V. 4)"><h2>Designer's Guide To Color 4</h2></a></div>
+                                            <div class="content_price">
+                                                <span class="price product-price"><span class="rupee">Rs</span>638</span>
+                                                <span class="price old-price"><span class="rupee">Rs</span>936</span>
+                                            </div>
+                                            <div class="info-orther">
+                                                <p class="availability">Availability: <span>Available</span></p>
+                                                <div class="product-desc">
+
+                                                </div>
+                                            </div>                                <div class="price-percent-reduction3">
+                                                32%<br> OFF
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </li>
+                                <li class="col-sx-12 col-sm-2">
+                                    <div class="product-container">
+                                        <div class="left-block">
+                                            <a href="http://www.buybooksindia.com/managerial-accounting-9780070700406-228886.htm">
+                                                <img class="img-responsive" src="~/images/image_028.jpg" alt="MANAGERIAL ACCOUNTING" title="MANAGERIAL ACCOUNTING" border="0" height="200px" width="135px">
+                                            </a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart" style="background:#ccc;">Out of Stock</div>
+                                        </div>
+                                        <div class="right-block">
+                                            <div class="product-name"><a href="http://www.buybooksindia.com/managerial-accounting-9780070700406-228886.htm" title="MANAGERIAL ACCOUNTING"><h2>Managerial Accounting</h2></a></div>
+                                            <div class="content_price">
+                                                <span class="price product-price"><span class="rupee">Rs</span>455</span>
+                                                <span class="price old-price"><span class="rupee">Rs</span>650</span>
+                                            </div>
+                                            <div class="info-orther">
+                                                <p class="availability">Availability: <span>Out of Stock</span></p>
+                                                <div class="product-desc">
+
+                                                </div>
+                                            </div>                                <div class="price-percent-reduction3">
+                                                30%<br> OFF
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </li>
+                                <li class="col-sx-12 col-sm-2">
+                                    <div class="product-container">
+                                        <div class="left-block">
+                                            <a href="http://www.buybooksindia.com/ibps-cwe-bank-po-mt-9781259003875-228674.htm">
+                                                <img class="img-responsive" src="~/images/image_023.jpg" alt="IBPS - CWE BANK PO/MT" title="IBPS - CWE BANK PO/MT" border="0" height="200px" width="135px">
+                                            </a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart" style="background:#ccc;">Out of Stock</div>
+                                        </div>
+                                        <div class="right-block">
+                                            <div class="product-name"><a href="http://www.buybooksindia.com/ibps-cwe-bank-po-mt-9781259003875-228674.htm" title="IBPS - CWE BANK PO/MT"><h2>Ibps - Cwe Bank Po/mt</h2></a></div>
+                                            <div class="content_price">
+                                                <span class="price product-price"><span class="rupee">Rs</span>406</span>
+                                                <span class="price old-price"><span class="rupee">Rs</span>495</span>
+                                            </div>
+                                            <div class="info-orther">
+                                                <p class="availability">Availability: <span>Out of Stock</span></p>
+                                                <div class="product-desc">
+
+                                                </div>
+                                            </div>                                <div class="price-percent-reduction3">
+                                                18%<br> OFF
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </li>
+                                <li class="col-sx-12 col-sm-2">
+                                    <div class="product-container">
+                                        <div class="left-block">
+                                            <a href="http://www.buybooksindia.com/cost-effect-9780875847887-229162.htm">
+                                                <img class="img-responsive" src="~/images/image_020.jpg" alt="COST &amp; EFFECT" title="COST &amp; EFFECT" border="0" height="200px" width="135px">
+                                            </a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart" style="background:#ccc;">Out of Stock</div>
+                                        </div>
+                                        <div class="right-block">
+                                            <div class="product-name"><a href="http://www.buybooksindia.com/cost-effect-9780875847887-229162.htm" title="COST &amp; EFFECT"><h2>Cost &amp; Effect</h2></a></div>
+                                            <div class="content_price">
+                                                <span class="price product-price"><span class="rupee">Rs</span>1750</span>
+                                            </div>
+                                            <div class="info-orther">
+                                                <p class="availability">Availability: <span>Out of Stock</span></p>
+                                                <div class="product-desc">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </li>
+                                <li class="col-sx-12 col-sm-2">
+                                    <div class="product-container">
+                                        <div class="left-block">
+                                            <a href="http://www.buybooksindia.com/gene-cloning-dna-danalysis-9781405181730-229209.htm">
+                                                <img class="img-responsive" src="~/images/image_017.jpg" alt="GENE CLONING &amp; DNA DANALYSIS" title="GENE CLONING &amp; DNA DANALYSIS" border="0" height="200px" width="135px">
+                                            </a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart"><a product-id="229209" class="add-to-carta" href="http://www.buybooksindia.com/add-to-cart.php?pid=229209" title="Buy Now">Buy Now</a></div>
+                                        </div>
+                                        <div class="right-block">
+                                            <div class="product-name"><a href="http://www.buybooksindia.com/gene-cloning-dna-danalysis-9781405181730-229209.htm" title="GENE CLONING &amp; DNA DANALYSIS"><h2>Gene Cloning &amp; Dna Danalysis</h2></a></div>
+                                            <div class="content_price">
+                                                <span class="price product-price"><span class="rupee">Rs</span>8204</span>
+                                            </div>
+                                            <div class="info-orther">
+                                                <p class="availability">Availability: <span>Available</span></p>
+                                                <div class="product-desc">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </li>
+                                <li class="col-sx-12 col-sm-2">
+                                    <div class="product-container">
+                                        <div class="left-block">
+                                            <a href="http://www.buybooksindia.com/illustrated-encyclopedia-of-birds-9781405362917-229098.htm">
+                                                <img class="img-responsive" src="~/images/image.jpg" alt="ILLUSTRATED ENCYCLOPEDIA OF BIRDS" title="ILLUSTRATED ENCYCLOPEDIA OF BIRDS" border="0" height="200px" width="135px">
+                                            </a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart"><a product-id="229098" class="add-to-carta" href="http://www.buybooksindia.com/add-to-cart.php?pid=229098" title="Buy Now">Buy Now</a></div>
+                                        </div>
+                                        <div class="right-block">
+                                            <div class="product-name"><a href="http://www.buybooksindia.com/illustrated-encyclopedia-of-birds-9781405362917-229098.htm" title="ILLUSTRATED ENCYCLOPEDIA OF BIRDS"><h2>Illustrated Encyclopedia Of</h2></a></div>
+                                            <div class="content_price">
+                                                <span class="price product-price"><span class="rupee">Rs</span>1079</span>
+                                                <span class="price old-price"><span class="rupee">Rs</span>1199</span>
+                                            </div>
+                                            <div class="info-orther">
+                                                <p class="availability">Availability: <span>Available</span></p>
+                                                <div class="product-desc">
+
+                                                </div>
+                                            </div>                                <div class="price-percent-reduction3">
+                                                10%<br> OFF
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </li>
+                                <li class="col-sx-12 col-sm-2">
+                                    <div class="product-container">
+                                        <div class="left-block">
+                                            <a href="http://www.buybooksindia.com/indesign-in-easy-steps-covers-cs3-cs4-cs5--9780071333573-228233.htm">
+                                                <img class="img-responsive" src="~/images/image_018.jpg" alt="INDESIGN IN EASY STEPS COVERS CS3, CS4 &amp; CS5 " title="INDESIGN IN EASY STEPS COVERS CS3, CS4 &amp; CS5 " border="0" height="200px" width="135px">
+                                            </a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart"><a product-id="228233" class="add-to-carta" href="http://www.buybooksindia.com/add-to-cart.php?pid=228233" title="Buy Now">Buy Now</a></div>
+                                        </div>
+                                        <div class="right-block">
+                                            <div class="product-name"><a href="http://www.buybooksindia.com/indesign-in-easy-steps-covers-cs3-cs4-cs5--9780071333573-228233.htm" title="INDESIGN IN EASY STEPS COVERS CS3, CS4 &amp; CS5 "><h2>Indesign In Easy Steps Covers</h2></a></div>
+                                            <div class="content_price">
+                                                <span class="price product-price"><span class="rupee">Rs</span>226</span>
+                                                <span class="price old-price"><span class="rupee">Rs</span>275</span>
+                                            </div>
+                                            <div class="info-orther">
+                                                <p class="availability">Availability: <span>Available</span></p>
+                                                <div class="product-desc">
+
+                                                </div>
+                                            </div>                                <div class="price-percent-reduction3">
+                                                18%<br> OFF
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </li>
+                                <li class="col-sx-12 col-sm-2">
+                                    <div class="product-container">
+                                        <div class="left-block">
+                                            <a href="http://www.buybooksindia.com/od-it-yourself-digital-home-office-projects-9788183332835-206551.htm">
+                                                <img class="img-responsive" src="~/images/image_011.jpg" alt="OD IT YOURSELF DIGITAL HOME OFFICE PROJECTS" title="OD IT YOURSELF DIGITAL HOME OFFICE PROJECTS" border="0" height="200px" width="135px">
+                                            </a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart"><a product-id="206551" class="add-to-carta" href="http://www.buybooksindia.com/add-to-cart.php?pid=206551" title="Buy Now">Buy Now</a></div>
+                                        </div>
+                                        <div class="right-block">
+                                            <div class="product-name"><a href="http://www.buybooksindia.com/od-it-yourself-digital-home-office-projects-9788183332835-206551.htm" title="OD IT YOURSELF DIGITAL HOME OFFICE PROJECTS"><h2>Od It Yourself Digital Home</h2></a></div>
+                                            <div class="content_price">
+                                                <span class="price product-price"><span class="rupee">Rs</span>187</span>
+                                                <span class="price old-price"><span class="rupee">Rs</span>240</span>
+                                            </div>
+                                            <div class="info-orther">
+                                                <p class="availability">Availability: <span>Available</span></p>
+                                                <div class="product-desc">
+
+                                                </div>
+                                            </div>                                <div class="price-percent-reduction3">
+                                                22%<br> OFF
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sx-12 col-sm-2">
+                                    <div class="product-container">
+                                        <div class="left-block">
+                                            <a href="http://www.buybooksindia.com/microsoft-sql-server2012-master-data-9781259029486-228916.htm">
+                                                <img class="img-responsive" src="~/images/image_012.jpg" alt="MICROSOFT SQL SERVER2012 MASTER DATA" title="MICROSOFT SQL SERVER2012 MASTER DATA" border="0" height="200px" width="135px">
+                                            </a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart"><a product-id="228916" class="add-to-carta" href="http://www.buybooksindia.com/add-to-cart.php?pid=228916" title="Buy Now">Buy Now</a></div>
+                                        </div>
+                                        <div class="right-block">
+                                            <div class="product-name"><a href="http://www.buybooksindia.com/microsoft-sql-server2012-master-data-9781259029486-228916.htm" title="MICROSOFT SQL SERVER2012 MASTER DATA"><h2>Microsoft Sql Server2012</h2></a></div>
+                                            <div class="content_price">
+                                                <span class="price product-price"><span class="rupee">Rs</span>672</span>
+                                                <span class="price old-price"><span class="rupee">Rs</span>819</span>
+                                            </div>
+                                            <div class="info-orther">
+                                                <p class="availability">Availability: <span>Available</span></p>
+                                                <div class="product-desc">
+
+                                                </div>
+                                            </div>                                <div class="price-percent-reduction3">
+                                                18%<br> OFF
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sx-12 col-sm-2">
+                                    <div class="product-container">
+                                        <div class="left-block">
+                                            <a href="http://www.buybooksindia.com/managing-indian-banks-the-challenges-ahead-9780761996118-228617.htm">
+                                                <img class="img-responsive" src="~/images/image_005.jpg" alt="MANAGING INDIAN BANKS: THE CHALLENGES AHEAD" title="MANAGING INDIAN BANKS: THE CHALLENGES AHEAD" border="0" height="200px" width="135px">
+                                            </a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart"><a product-id="228617" class="add-to-carta" href="http://www.buybooksindia.com/add-to-cart.php?pid=228617" title="Buy Now">Buy Now</a></div>
+                                        </div>
+                                        <div class="right-block">
+                                            <div class="product-name"><a href="http://www.buybooksindia.com/managing-indian-banks-the-challenges-ahead-9780761996118-228617.htm" title="MANAGING INDIAN BANKS: THE CHALLENGES AHEAD"><h2>Managing Indian Banks: The</h2></a></div>
+                                            <div class="content_price">
+                                                <span class="price product-price"><span class="rupee">Rs</span>336</span>
+                                                <span class="price old-price"><span class="rupee">Rs</span>420</span>
+                                            </div>
+                                            <div class="info-orther">
+                                                <p class="availability">Availability: <span>Available</span></p>
+                                                <div class="product-desc">
+
+                                                </div>
+                                            </div>                                <div class="price-percent-reduction3">
+                                                20%<br> OFF
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-sx-12 col-sm-2">
+                                    <div class="product-container">
+                                        <div class="left-block">
+                                            <a href="http://www.buybooksindia.com/upgrading-and-fixing-a-pc-in-easy-steps-9781259003912-228237.htm">
+                                                <img class="img-responsive" src="~/images/image_029.jpg" alt="UPGRADING AND FIXING A PC IN EASY STEPS" title="UPGRADING AND FIXING A PC IN EASY STEPS" border="0" height="200px" width="135px">
+                                            </a>
+                                            <div class="quick-view">
+                                                <a title="Add to my wishlist" class="heart" href="#"></a>
+                                                <a title="Add to compare" class="compare" href="#"></a>
+                                                <a title="Quick view" class="search" href="#"></a>
+                                            </div>
+                                            <div class="add-to-cart"><a product-id="228237" class="add-to-carta" href="http://www.buybooksindia.com/add-to-cart.php?pid=228237" title="Buy Now">Buy Now</a></div>
+                                        </div>
+                                        <div class="right-block">
+                                            <div class="product-name"><a href="http://www.buybooksindia.com/upgrading-and-fixing-a-pc-in-easy-steps-9781259003912-228237.htm" title="UPGRADING AND FIXING A PC IN EASY STEPS"><h2>Upgrading And Fixing A Pc In</h2></a></div>
+                                            <div class="content_price">
+                                                <span class="price product-price"><span class="rupee">Rs</span>226</span>
+                                                <span class="price old-price"><span class="rupee">Rs</span>275</span>
+                                            </div>
+                                            <div class="info-orther">
+                                                <p class="availability">Availability: <span>Available</span></p>
+                                                <div class="product-desc">
+
+                                                </div>
+                                            </div>                                <div class="price-percent-reduction3">
+                                                18%<br> OFF
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>*@
+                        </ul>
+                    </div>
+                    @*<div id="loadingbar" class="loading-bar">Loading Books</div>*@
+                </div>
+                <div class="end-loading-bar" id="endofrecord" style="display:none;">
+                    <div>No more results to display!</div>
+                </div>
+            </div>
+
+
+            <!-- ./PRODUCT LIST -->
+        </div>
+        <!-- ./view-product-list-->
+        <!-- ./ Center colunm -->
+    </div>
+    <!-- ./row-->
+</div>

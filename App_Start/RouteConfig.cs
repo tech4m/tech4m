@@ -1,0 +1,87 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Routing;
+
+namespace tech4mUI
+{
+    public class RouteConfig
+    {
+        public static void RegisterRoutes(RouteCollection routes)
+        {
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            routes.MapRoute(
+            name: "signin-google",
+            url: "signin-google",
+            defaults: new { controller = "Home", action = "ExternalLoginCallback" });
+
+            routes.MapRoute(
+            name: "signin-linkedin",
+            url: "signin-linkedin",
+            defaults: new { controller = "Home", action = "ExternalLoginCallback" });
+
+      //      routes.MapRoute(
+      //  "Post",
+      //  "Archive/{year}/{month}/{title}",
+      //  new { controller = "Blog", action = "Post" }
+      //);
+
+      //      routes.MapRoute(
+      //        "Archive",
+      //        "Archive/{year}/{month}",
+      //        new { controller = "Blog", action = "Archive", year = UrlParameter.Optional, month = UrlParameter.Optional }
+      //      );
+
+      //      routes.MapRoute(
+      //        "Category",
+      //        "Category/{category}",
+      //        new { controller = "Blog", action = "Category" }
+      //      );
+
+      //      routes.MapRoute(
+      //        "Tag",
+      //        "Tag/{tag}",
+      //        new { controller = "Blog", action = "Tag" }
+      //      );
+
+      //      routes.MapRoute(
+      //        "Login",
+      //        "Login",
+      //        new { controller = "Admin", action = "Login" }
+      //      );
+
+      //      routes.MapRoute(
+      //        "Logout",
+      //        "Logout",
+      //        new { controller = "Admin", action = "Logout" }
+      //      );
+
+      //      routes.MapRoute(
+      //        "Manage",
+      //        "Manage",
+      //        new { controller = "Admin", action = "Manage" }
+      //      );
+
+      //      routes.MapRoute(
+      //        "AdminAction",
+      //        "Admin/{action}",
+      //        new { controller = "Admin", action = "Login" }
+      //      );
+
+      //      routes.MapRoute(
+      //        "Action",
+      //        "{action}",
+      //        new { controller = "Blog", action = "Posts" }
+      //      );
+
+            routes.MapRoute(
+                name: "Default",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            );
+        }
+    }
+}

@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Tech4mService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:38729/Tech4mService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:38729/Tech4mService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:38729/Tech4mService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/tech4mEntity" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITech4mService_SaveUpdateVideo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateVideo" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_SaveUpdateVideo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateVideoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_DeleteVideo_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteVideo" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_DeleteVideo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteVideoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetVideoList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVideoList" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetVideoList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVideoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetVideo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVideo" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetVideo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVideoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_SaveUpdateBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateBook" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_SaveUpdateBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_DeleteBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBook" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_DeleteBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetBookList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookList" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetBookList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_SearchBookByISBN_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchBookByISBN" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_SearchBookByISBN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchBookByISBNResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_AddCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCategory" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_AddCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_SaveUpdateCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateCategory" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_SaveUpdateCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_DeleteCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCategory" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_DeleteCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetCategoryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetCategoryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_TotalCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:TotalCategories" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_TotalCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TotalCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_Category_InputMessage">
+    <wsdl:part name="parameters" element="tns:Category" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_Category_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_EditCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditCategory" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_EditCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_Categories_InputMessage">
+    <wsdl:part name="parameters" element="tns:Categories" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_Categories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_AddSubCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSubCategory" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_AddSubCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSubCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_SaveUpdateSubCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateSubCategory" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_SaveUpdateSubCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateSubCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_DeleteSubCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSubCategory" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_DeleteSubCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSubCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetSubCategoryListByCategoryId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubCategoryListByCategoryId" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetSubCategoryListByCategoryId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubCategoryListByCategoryIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_TotalSubCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:TotalSubCategories" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_TotalSubCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TotalSubCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_EditSubCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditSubCategory" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_EditSubCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditSubCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_SubCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubCategories" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_SubCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_SaveUpdateInterviewQuestion_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateInterviewQuestion" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_SaveUpdateInterviewQuestion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateInterviewQuestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_DeleteInterviewQuestion_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInterviewQuestion" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_DeleteInterviewQuestion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInterviewQuestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetInterviewQuestionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInterviewQuestionList" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetInterviewQuestionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInterviewQuestionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetInterviewQuestionById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInterviewQuestionById" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetInterviewQuestionById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInterviewQuestionByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetInterviewQuestionListByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInterviewQuestionListByCategory" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetInterviewQuestionListByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInterviewQuestionListByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetInterviewQuestionListByBySubCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInterviewQuestionListByBySubCategory" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetInterviewQuestionListByBySubCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInterviewQuestionListByBySubCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_AddInterviewQuestionToPlayList_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddInterviewQuestionToPlayList" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_AddInterviewQuestionToPlayList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddInterviewQuestionToPlayListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_SaveUpdateInterviewQuestionAnswer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateInterviewQuestionAnswer" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_SaveUpdateInterviewQuestionAnswer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateInterviewQuestionAnswerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetInterviewQuestionAnswer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInterviewQuestionAnswer" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetInterviewQuestionAnswer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInterviewQuestionAnswerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_SaveUpdateArticle_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateArticle" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_SaveUpdateArticle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveUpdateArticleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_DeleteArticle_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteArticle" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_DeleteArticle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteArticleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetArticleList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArticleList" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_GetArticleList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArticleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_PostWithPaging_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostWithPaging" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_PostWithPaging_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostWithPagingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_PostsForTag_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostsForTag" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_PostsForTag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostsForTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_PostsForCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostsForCategory" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_PostsForCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostsForCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_PostsForSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostsForSearch" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_PostsForSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostsForSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_TotalPosts_InputMessage">
+    <wsdl:part name="parameters" element="tns:TotalPosts" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_TotalPosts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TotalPostsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_TotalPostsForCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:TotalPostsForCategory" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_TotalPostsForCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TotalPostsForCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_TotalPostsForTag_InputMessage">
+    <wsdl:part name="parameters" element="tns:TotalPostsForTag" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_TotalPostsForTag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TotalPostsForTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_TotalPostsForSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:TotalPostsForSearch" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_TotalPostsForSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TotalPostsForSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_PostListWithSort_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostListWithSort" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_PostListWithSort_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostListWithSortResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_PostByMonthYear_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostByMonthYear" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_PostByMonthYear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostByMonthYearResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_PostByUniqueId_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostByUniqueId" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_PostByUniqueId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostByUniqueIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_AddPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPost" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_AddPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_EditPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditPost" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_EditPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_DeletePost_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePost" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_DeletePost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_Tags_InputMessage">
+    <wsdl:part name="parameters" element="tns:Tags" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_Tags_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TagsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_TotalTags_InputMessage">
+    <wsdl:part name="parameters" element="tns:TotalTags" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_TotalTags_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TotalTagsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_Tag_InputMessage">
+    <wsdl:part name="parameters" element="tns:Tag" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_Tag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TagResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_TagByUniqueId_InputMessage">
+    <wsdl:part name="parameters" element="tns:TagByUniqueId" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_TagByUniqueId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TagByUniqueIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_AddTag_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTag" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_AddTag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_EditTag_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditTag" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_EditTag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_DeleteTag_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTag" />
+  </wsdl:message>
+  <wsdl:message name="ITech4mService_DeleteTag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTagResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITech4mService">
+    <wsdl:operation name="SaveUpdateVideo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/SaveUpdateVideo" message="tns:ITech4mService_SaveUpdateVideo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/SaveUpdateVideoResponse" message="tns:ITech4mService_SaveUpdateVideo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVideo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/DeleteVideo" message="tns:ITech4mService_DeleteVideo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/DeleteVideoResponse" message="tns:ITech4mService_DeleteVideo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVideoList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/GetVideoList" message="tns:ITech4mService_GetVideoList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/GetVideoListResponse" message="tns:ITech4mService_GetVideoList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVideo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/GetVideo" message="tns:ITech4mService_GetVideo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/GetVideoResponse" message="tns:ITech4mService_GetVideo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/SaveUpdateBook" message="tns:ITech4mService_SaveUpdateBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/SaveUpdateBookResponse" message="tns:ITech4mService_SaveUpdateBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBook">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/DeleteBook" message="tns:ITech4mService_DeleteBook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/DeleteBookResponse" message="tns:ITech4mService_DeleteBook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBookList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/GetBookList" message="tns:ITech4mService_GetBookList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/GetBookListResponse" message="tns:ITech4mService_GetBookList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchBookByISBN">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/SearchBookByISBN" message="tns:ITech4mService_SearchBookByISBN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/SearchBookByISBNResponse" message="tns:ITech4mService_SearchBookByISBN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/AddCategory" message="tns:ITech4mService_AddCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/AddCategoryResponse" message="tns:ITech4mService_AddCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/SaveUpdateCategory" message="tns:ITech4mService_SaveUpdateCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/SaveUpdateCategoryResponse" message="tns:ITech4mService_SaveUpdateCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/DeleteCategory" message="tns:ITech4mService_DeleteCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/DeleteCategoryResponse" message="tns:ITech4mService_DeleteCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/GetCategoryList" message="tns:ITech4mService_GetCategoryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/GetCategoryListResponse" message="tns:ITech4mService_GetCategoryList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TotalCategories">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/TotalCategories" message="tns:ITech4mService_TotalCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/TotalCategoriesResponse" message="tns:ITech4mService_TotalCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Category">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/Category" message="tns:ITech4mService_Category_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/CategoryResponse" message="tns:ITech4mService_Category_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/EditCategory" message="tns:ITech4mService_EditCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/EditCategoryResponse" message="tns:ITech4mService_EditCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Categories">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/Categories" message="tns:ITech4mService_Categories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/CategoriesResponse" message="tns:ITech4mService_Categories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSubCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/AddSubCategory" message="tns:ITech4mService_AddSubCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/AddSubCategoryResponse" message="tns:ITech4mService_AddSubCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateSubCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/SaveUpdateSubCategory" message="tns:ITech4mService_SaveUpdateSubCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/SaveUpdateSubCategoryResponse" message="tns:ITech4mService_SaveUpdateSubCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSubCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/DeleteSubCategory" message="tns:ITech4mService_DeleteSubCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/DeleteSubCategoryResponse" message="tns:ITech4mService_DeleteSubCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCategoryListByCategoryId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/GetSubCategoryListByCategoryId" message="tns:ITech4mService_GetSubCategoryListByCategoryId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/GetSubCategoryListByCategoryIdResponse" message="tns:ITech4mService_GetSubCategoryListByCategoryId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TotalSubCategories">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/TotalSubCategories" message="tns:ITech4mService_TotalSubCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/TotalSubCategoriesResponse" message="tns:ITech4mService_TotalSubCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditSubCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/EditSubCategory" message="tns:ITech4mService_EditSubCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/EditSubCategoryResponse" message="tns:ITech4mService_EditSubCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubCategories">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/SubCategories" message="tns:ITech4mService_SubCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/SubCategoriesResponse" message="tns:ITech4mService_SubCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateInterviewQuestion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/SaveUpdateInterviewQuestion" message="tns:ITech4mService_SaveUpdateInterviewQuestion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/SaveUpdateInterviewQuestionResponse" message="tns:ITech4mService_SaveUpdateInterviewQuestion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInterviewQuestion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/DeleteInterviewQuestion" message="tns:ITech4mService_DeleteInterviewQuestion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/DeleteInterviewQuestionResponse" message="tns:ITech4mService_DeleteInterviewQuestion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInterviewQuestionList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/GetInterviewQuestionList" message="tns:ITech4mService_GetInterviewQuestionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/GetInterviewQuestionListResponse" message="tns:ITech4mService_GetInterviewQuestionList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInterviewQuestionById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/GetInterviewQuestionById" message="tns:ITech4mService_GetInterviewQuestionById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/GetInterviewQuestionByIdResponse" message="tns:ITech4mService_GetInterviewQuestionById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInterviewQuestionListByCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/GetInterviewQuestionListByCategory" message="tns:ITech4mService_GetInterviewQuestionListByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/GetInterviewQuestionListByCategoryResponse" message="tns:ITech4mService_GetInterviewQuestionListByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInterviewQuestionListByBySubCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/GetInterviewQuestionListByBySubCategory" message="tns:ITech4mService_GetInterviewQuestionListByBySubCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/GetInterviewQuestionListByBySubCategoryResponse" message="tns:ITech4mService_GetInterviewQuestionListByBySubCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddInterviewQuestionToPlayList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/AddInterviewQuestionToPlayList" message="tns:ITech4mService_AddInterviewQuestionToPlayList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/AddInterviewQuestionToPlayListResponse" message="tns:ITech4mService_AddInterviewQuestionToPlayList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateInterviewQuestionAnswer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/SaveUpdateInterviewQuestionAnswer" message="tns:ITech4mService_SaveUpdateInterviewQuestionAnswer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/SaveUpdateInterviewQuestionAnswerResponse" message="tns:ITech4mService_SaveUpdateInterviewQuestionAnswer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInterviewQuestionAnswer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/GetInterviewQuestionAnswer" message="tns:ITech4mService_GetInterviewQuestionAnswer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/GetInterviewQuestionAnswerResponse" message="tns:ITech4mService_GetInterviewQuestionAnswer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateArticle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/SaveUpdateArticle" message="tns:ITech4mService_SaveUpdateArticle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/SaveUpdateArticleResponse" message="tns:ITech4mService_SaveUpdateArticle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteArticle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/DeleteArticle" message="tns:ITech4mService_DeleteArticle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/DeleteArticleResponse" message="tns:ITech4mService_DeleteArticle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArticleList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/GetArticleList" message="tns:ITech4mService_GetArticleList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/GetArticleListResponse" message="tns:ITech4mService_GetArticleList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostWithPaging">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/PostWithPaging" message="tns:ITech4mService_PostWithPaging_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/PostWithPagingResponse" message="tns:ITech4mService_PostWithPaging_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostsForTag">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/PostsForTag" message="tns:ITech4mService_PostsForTag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/PostsForTagResponse" message="tns:ITech4mService_PostsForTag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostsForCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/PostsForCategory" message="tns:ITech4mService_PostsForCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/PostsForCategoryResponse" message="tns:ITech4mService_PostsForCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostsForSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/PostsForSearch" message="tns:ITech4mService_PostsForSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/PostsForSearchResponse" message="tns:ITech4mService_PostsForSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TotalPosts">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/TotalPosts" message="tns:ITech4mService_TotalPosts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/TotalPostsResponse" message="tns:ITech4mService_TotalPosts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TotalPostsForCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/TotalPostsForCategory" message="tns:ITech4mService_TotalPostsForCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/TotalPostsForCategoryResponse" message="tns:ITech4mService_TotalPostsForCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TotalPostsForTag">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/TotalPostsForTag" message="tns:ITech4mService_TotalPostsForTag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/TotalPostsForTagResponse" message="tns:ITech4mService_TotalPostsForTag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TotalPostsForSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/TotalPostsForSearch" message="tns:ITech4mService_TotalPostsForSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/TotalPostsForSearchResponse" message="tns:ITech4mService_TotalPostsForSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostListWithSort">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/PostListWithSort" message="tns:ITech4mService_PostListWithSort_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/PostListWithSortResponse" message="tns:ITech4mService_PostListWithSort_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostByMonthYear">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/PostByMonthYear" message="tns:ITech4mService_PostByMonthYear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/PostByMonthYearResponse" message="tns:ITech4mService_PostByMonthYear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostByUniqueId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/PostByUniqueId" message="tns:ITech4mService_PostByUniqueId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/PostByUniqueIdResponse" message="tns:ITech4mService_PostByUniqueId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/AddPost" message="tns:ITech4mService_AddPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/AddPostResponse" message="tns:ITech4mService_AddPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/EditPost" message="tns:ITech4mService_EditPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/EditPostResponse" message="tns:ITech4mService_EditPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePost">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/DeletePost" message="tns:ITech4mService_DeletePost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/DeletePostResponse" message="tns:ITech4mService_DeletePost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Tags">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/Tags" message="tns:ITech4mService_Tags_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/TagsResponse" message="tns:ITech4mService_Tags_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TotalTags">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/TotalTags" message="tns:ITech4mService_TotalTags_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/TotalTagsResponse" message="tns:ITech4mService_TotalTags_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Tag">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/Tag" message="tns:ITech4mService_Tag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/TagResponse" message="tns:ITech4mService_Tag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TagByUniqueId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/TagByUniqueId" message="tns:ITech4mService_TagByUniqueId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/TagByUniqueIdResponse" message="tns:ITech4mService_TagByUniqueId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTag">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/AddTag" message="tns:ITech4mService_AddTag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/AddTagResponse" message="tns:ITech4mService_AddTag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditTag">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/EditTag" message="tns:ITech4mService_EditTag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/EditTagResponse" message="tns:ITech4mService_EditTag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTag">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITech4mService/DeleteTag" message="tns:ITech4mService_DeleteTag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITech4mService/DeleteTagResponse" message="tns:ITech4mService_DeleteTag_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITech4mService" type="tns:ITech4mService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveUpdateVideo">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/SaveUpdateVideo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVideo">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/DeleteVideo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVideoList">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/GetVideoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVideo">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/GetVideo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateBook">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/SaveUpdateBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBook">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/DeleteBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBookList">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/GetBookList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchBookByISBN">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/SearchBookByISBN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCategory">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/AddCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateCategory">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/SaveUpdateCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCategory">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/DeleteCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryList">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/GetCategoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TotalCategories">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/TotalCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Category">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/Category" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditCategory">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/EditCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Categories">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/Categories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSubCategory">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/AddSubCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateSubCategory">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/SaveUpdateSubCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSubCategory">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/DeleteSubCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCategoryListByCategoryId">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/GetSubCategoryListByCategoryId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TotalSubCategories">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/TotalSubCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditSubCategory">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/EditSubCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubCategories">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/SubCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateInterviewQuestion">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/SaveUpdateInterviewQuestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInterviewQuestion">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/DeleteInterviewQuestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInterviewQuestionList">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/GetInterviewQuestionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInterviewQuestionById">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/GetInterviewQuestionById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInterviewQuestionListByCategory">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/GetInterviewQuestionListByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInterviewQuestionListByBySubCategory">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/GetInterviewQuestionListByBySubCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddInterviewQuestionToPlayList">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/AddInterviewQuestionToPlayList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateInterviewQuestionAnswer">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/SaveUpdateInterviewQuestionAnswer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInterviewQuestionAnswer">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/GetInterviewQuestionAnswer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUpdateArticle">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/SaveUpdateArticle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteArticle">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/DeleteArticle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArticleList">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/GetArticleList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostWithPaging">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/PostWithPaging" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostsForTag">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/PostsForTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostsForCategory">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/PostsForCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostsForSearch">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/PostsForSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TotalPosts">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/TotalPosts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TotalPostsForCategory">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/TotalPostsForCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TotalPostsForTag">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/TotalPostsForTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TotalPostsForSearch">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/TotalPostsForSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostListWithSort">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/PostListWithSort" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostByMonthYear">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/PostByMonthYear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostByUniqueId">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/PostByUniqueId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPost">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/AddPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditPost">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/EditPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePost">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/DeletePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tags">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/Tags" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TotalTags">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/TotalTags" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tag">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/Tag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TagByUniqueId">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/TagByUniqueId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTag">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/AddTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditTag">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/EditTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTag">
+      <soap:operation soapAction="http://tempuri.org/ITech4mService/DeleteTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Tech4mService">
+    <wsdl:port name="BasicHttpBinding_ITech4mService" binding="tns:BasicHttpBinding_ITech4mService">
+      <soap:address location="http://localhost:38729/Tech4mService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

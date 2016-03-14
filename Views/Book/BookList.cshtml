@@ -1,0 +1,1160 @@
+﻿@{
+    ViewBag.Title = "BookList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<tech4mEntity.Book> obj = new List<tech4mEntity.Book>();
+    obj = ((List<tech4mEntity.Book>)(Session["BookList"]));
+}
+
+<h2>Books List</h2>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    @*<link rel="stylesheet" type="text/css" href="~/Content/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="~/Content/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="~/Content/select2.css">
+        <link rel="stylesheet" type="text/css" href="~/Content/jquery.css">
+        <link rel="stylesheet" type="text/css" href="~/Content/owl.css">
+        <link rel="stylesheet" type="text/css" href="~/Content/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="~/Content/animate.css">
+        <link rel="stylesheet" type="text/css" href="~/Content/reset.css">
+        <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+        <link rel="stylesheet" type="text/css" href="~/Content/responsive.css">
+        <link rel="stylesheet" type="text/css" href="~/Content/option3.css">
+        <script src="~/scripts/js" async="" type="text/javascript"></script>
+        <script src="~/scripts/fbds.js" async=""></script>
+        <script src="~/scripts/gtm.htm" async=""></script>
+        <script src="~/scripts/dc.js" async="" type="text/javascript"></script>
+        <script type="text/javascript" src="~/scripts/jquery-1.js"></script>*@
+
+    <!---------------------------- Code for autocomplete search --------------------------------->
+    <script type="text/javascript"> window.$ = window.jQuery = jQuery;</script>
+    <link href="~/Content/css.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        var searchby = '';
+        function srchAutoComplete() {
+            $("#keyword").unbind("autocomplete");
+            $("#keyword").autocomplete({
+                source: "/ajax/global_search.php?searchby=" + searchby,
+                minLength: 2,
+                select: function (event, ui) {
+                    var getUrl = ui.item.id;
+                    if (getUrl != '#') {
+                        location.href = getUrl;
+                    }
+                },
+                html: true,
+                open: function (event, ui) {
+                    $(".ui-autocomplete").css("z-index", 1000);
+                }
+            });
+        }
+        $(function () {
+
+            $('form#form1 #searchby').change(function (e) {
+                searchby = $(this).val();
+                srchAutoComplete();
+
+            })
+            // searchby = $('form#form1 #searchby').val();
+
+            srchAutoComplete();
+
+        });
+    </script>
+
+    <!----------------------------End of code for autocomplete search --------------------------------->
+
+    <title>Online Computer certification: Microsoft (eg MCSE) Books at Low Price - Buy Books India</title>
+    <meta name="description" content="Huge collection of Computer certification: Microsoft (eg MCSE) Books available at online library - Buy Books India at cheapest price. Fastest shipping delivery and cash on delivery facility.">
+    <meta name="keywords" content="Computer certification: Microsoft (eg MCSE) books, buy Computer certification: Microsoft (eg MCSE) books, online Computer certification: Microsoft (eg MCSE) books, Computer certification: Microsoft (eg MCSE) books online, new Computer certification: Microsoft (eg MCSE) books, upcoming Computer certification: Microsoft (eg MCSE) books">
+    <link rel="shortcut icon" href="http://www.buybooksindia.com/assets/images/favicon.ico">
+    <link href="https://plus.google.com/108051757296355349581" rel="publisher">
+    <link rel="canonical" href="http://www.buybooksindia.com/computer-certification-microsoft-eg-mcse--books-s2716.php">
+    <meta name="ROBOTS" content="INDEX, FOLLOW">
+    <script type="text/javascript">
+        $(window).load(function () {
+            $("#loader").fadeOut("slow");
+        })
+    </script>
+    <style>
+        #loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url('./assets/images/buybooksindiaisloading.png') 50% 50% no-repeat rgb(249,249,249);
+        }
+    </style>
+    <style>
+        .loading-bar {
+            border: 1px solid #ddd;
+            margin-top: 15px;
+            height: 23px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .end-loading-bar {
+            border: 1px solid #ddd;
+            margin-top: 15px;
+            height: 23px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .loading-bar:hover {
+            box-shadow: inset 0px 45px 30px -40px rgba(0, 0, 0, 0.05);
+        }
+
+        #sort-dropdown option {
+            padding: 2px 5px;
+        }
+    </style>
+
+
+    @*<script type="text/javascript">
+
+                  var _gaq = _gaq || [];
+                  _gaq.push(['_setAccount', 'UA-10130255-1']);
+                  _gaq.push(['_trackPageview']);
+
+                  (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                  })();
+
+
+            </script>
+
+            <!-- Google Tag Manager -->
+
+            <noscript>
+                <iframe src="//www.googletagmanager.com/ns.html?id=GTM-TSJ67K"
+                        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+            </noscript>
+
+            <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+
+        })(window,document,'script','dataLayer','GTM-TSJ67K');</script>
+
+            <!-- End Google Tag Manager -->
+
+            <script>
+        (function() {
+          var _fbq = window._fbq || (window._fbq = []);
+          if (!_fbq.loaded) {
+            var fbds = document.createElement('script');
+            fbds.async = true;
+            fbds.src = '//connect.facebook.net/en_US/fbds.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(fbds, s);
+            _fbq.loaded = true;
+          }
+          _fbq.push(['addPixelId', '1730507033841817']);
+        })();
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', 'PixelInitialized', {}]);
+            </script>
+            <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1730507033841817&amp;ev=PixelInitialized" /></noscript>
+            <script src="~/scripts/javascript.js"> </script>
+            <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+            <script>
+
+        $(document).ready(function() {
+
+            $('#bookdata').scrollPagination({
+
+                        nop     : 18, // The number of products per scroll to be loaded
+                        offset  : 0, // Initial offset, begins at 0 in this case
+                error   : 'No more results to display!', // When the user reaches the end this is the message that is
+                                            // displayed. You can change this if you want.
+                delay   : 500, // When you scroll down the products will load after a delayed amount of time.
+                               // This is mainly for usability concerns. You can alter this as you see fit
+                scroll  : true // The main bit, if set to false products will not load as the user scrolls.
+                               // but will still load if the user clicks.
+
+            });
+
+        });
+
+            </script>
+            <script type="text/javascript">
+                $(window).scroll(function() {
+                    if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+                        last_msg_funtion();
+                    }
+                            });
+
+                    $(document).ready(function() {
+
+                        $("#sort-dropdown").change(function() {
+                            var sortdropdown = $("#sort-dropdown").val();
+                            $.ajax({
+                                url:"ajax/making_sortby.php",
+                                type:"POST",
+                                data:"sortby="+sortdropdown,
+                                success: function() {
+                                    location.reload();
+                                    }
+                            });
+
+                        });
+
+                    });
+            </script>*@
+</head>
+<body class="category-page option2 option3">
+    <!-- HEADER -->
+    <div id="header" class="header">
+        <div class="top-header">
+            <div class="container">
+                <div class="currency ">
+                    <a>Free shipping on orders above <span class="rupee">Rs</span> 300</a>
+                </div>
+                <div class="cod">
+                    <a>Cash on delivery*</a>
+                </div>
+
+                <div class="support-link">
+                    <!--  <a href="#">Services</a>-->
+                    <a href="http://www.buybooksindia.com/contact-us.php">Contact us</a>
+                </div>
+
+
+                <div id="user-info-top" class="user-info pull-right">
+                    <div class="dropdown">
+                        <a class="current-open" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="http://www.buybooksindia.com/control/login.php"><span>My Account</span></a>
+                        <ul class="dropdown-menu mega_dropdown" role="menu">
+                            <li><a href="http://www.buybooksindia.com/control/login.php">Login</a></li>
+                            <li><a href="http://www.buybooksindia.com/control/myorders.php">My Orders</a></li>
+                            <li><a href="http://www.buybooksindia.com/control/myaddress.php">My Address</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/.top-header -->
+        <!-- MAIN HEADER -->
+        <div class="container main-header">
+            @*<div class="row top-main-header">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-5 col-md-5 col-lg-5">
+                        <ul class="main-header-top-link">
+                            <li><a href="http://www.buybooksindia.com/how-to-order.php">How to Order</a></li>
+                            <li><a href="http://www.buybooksindia.com/payments.php">Payment</a></li>
+                            <li><a href="http://www.buybooksindia.com/shipping-and-delivery.php">Shipping</a></li>
+                            <li><a href="http://www.buybooksindia.com/returns-and-exchange.php">Return</a></li>
+                            <li><a href="http://www.buybooksindia.com/contact-us.php">Call Us: +91-11-45355555</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <div class="header-text">
+                            <i class="fa fa-info-circle"></i> <a href="http://www.buybooksindia.com/great-books-at-great-discounts-books-p53.php">Flat 60% off on selected books with same day shipping!</a>
+                        </div>
+                    </div>
+                </div>*@
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 logo">
+                    <a href="http://www.buybooksindia.com/"><h1><img alt="Indian Bookstore Online, Buy Books Online India, Online Books Shopping" src="~/images/logo.png" title="Buy Books India"></h1></a>
+                </div>
+                <div class="col-xs-6 col-sm-6 header-search-box">
+
+
+                    <form class="form-inline" id="form1" name="form1" method="get" action="/search.php">
+                        <div class="form-group form-category">
+                            <select aria-hidden="true" tabindex="-1" name="searchby" id="searchby" class="select-category select2-hidden-accessible">
+                                <option selected="selected" value="1">Book</option>
+                                <option value="2">Author</option>
+                                <option value="3">Subject</option>
+                            </select><span style="width: 64px;" dir="ltr" class="select2 select2-container select2-container--default"><span class="selection"><span aria-labelledby="select2-searchby-container" tabindex="0" class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false"><span title="Book" id="select2-searchby-container" class="select2-selection__rendered">Book</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        </div>
+                        <div class="form-group input-serach">
+                            <input placeholder="Search by title, author, subject or ISBN here..." id="keyword" class="ui-autocomplete-input" name="keyword" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true" type="text">
+                        </div>
+                        <button type="submit" class="pull-right btn-search" id="find-books"></button>
+                    </form>
+                </div>
+                @*<div class="col-sm-6 col-md-3 group-button-header">
+                        <div class="btn-cart" id="cart-block">
+                            <div id="bbi_cart">
+                                <a title="My cart" href="#">Cart</a>
+                                <span class="notify notify-right">0</span>
+                            </div>
+                            <div class="cart-block">
+                                <div class="cart-block-content">
+                                    <h5 class="cart-title">0 Items in my cart</h5>
+                                    <div class="cart-block-list">
+                                        <ul>
+                                            <h2 id="cartEmptyText">Your&nbsp;shopping&nbsp;cart&nbsp;is&nbsp;empty.</h2>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a title="Login" href="http://www.buybooksindia.com/control/login.php" class="btn-login">Login</a>
+                    </div>*@
+            </div>
+
+        </div>
+        <!-- END MANIN HEADER -->
+        <div id="nav-top-menu" class="nav-top-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3" id="box-vertical-megamenus">
+                        <div class="box-vertical-megamenus">
+                            <h4 class="title">
+                                <span class="title-menu">Categories</span>
+                                <span class="btn-open-mobile pull-right home-page"><i class="fa fa-bars"></i></span>
+                            </h4>
+                            <div class="vertical-menu-content is-home" style="display: none;">
+                                <ul class="vertical-menu-list">
+                                    <li>
+                                        <a class="parent" href="#"><img class="icon-menu" alt="Funky roots" src="~/images/13.png">Arts &amp; Photography</a>
+                                        <div style="width: 900px;" class="vertical-dropdown-menu">
+                                            <div class="vertical-groups col-sm-12">
+                                                <div class="mega-group col-sm-12">
+                                                    <h4 class="mega-group-header"><span>Arts &amp; Photography</span></h4>
+                                                    <ul class="group-link-default">
+                                                        <li><a href="http://www.buybooksindia.com/architecture-books-s2660.php">Architecture</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/fashion-design-books-s2671.php">Fashion Design</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/photography-and-photographs-books-s2672.php">Photography &amp; Photographs</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/drawing-and-drawings-books-s2682.php">Drawing &amp; Drawings</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/museums-and-art-galleries-books-s2685.php">Museums &amp; Art Galleries</a></li>
+
+                                                        <li class="more-catg"><a href="http://www.buybooksindia.com/arts-and-photography-books-c94.php">More...</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="parent" href="#"><img class="icon-menu" alt="Funky roots" src="~/images/13.png">Biography</a>
+                                        <div style="width: 900px;" class="vertical-dropdown-menu">
+                                            <div class="vertical-groups col-sm-12">
+                                                <div class="mega-group col-sm-12">
+                                                    <h4 class="mega-group-header"><span>Biography</span></h4>
+                                                    <ul class="group-link-default">
+                                                        <li><a href="http://www.buybooksindia.com/biography-historical-political-and-military-books-s16.php">Biography: Historical, Political &amp; Military</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/biography-business-and-industry-books-s38.php">Biography: Business &amp; Industry</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/biography-science-technology-and-medicine-books-s8524.php">Biography: Science, Technology &amp; Medicine</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/biography-literary-books-s8525.php">Biography: Literary</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/individual-composers-and-musicians-specific-bands-and-groups-books-s8663.php">Individual Composers &amp; Musicians, Specific Bands &amp; Groups</a></li>
+
+                                                        <li class="more-catg"><a href="http://www.buybooksindia.com/biography-books-c298.php">More...</a></li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="parent" href="#"><img class="icon-menu" alt="Funky roots" src="~/images/13.png">Business &amp; Investing</a>
+                                        <div style="width: 900px;" class="vertical-dropdown-menu">
+                                            <div class="vertical-groups col-sm-12">
+                                                <div class="mega-group col-sm-12">
+                                                    <h4 class="mega-group-header"><span>Business &amp; Investing</span></h4>
+                                                    <ul class="group-link-default">
+                                                        <li><a href="http://www.buybooksindia.com/economics-books-s2654.php">Economics</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/small-businesses-and-self-employed-books-s2688.php">Small Businesses &amp; Self-Employed</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/taxation-books-s2693.php">Taxation</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/personal-finance-books-s2709.php">Personal Finance</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/organizational-theory-and-behaviour-books-s2710.php">Organizational Theory &amp; Behaviour</a></li>
+
+                                                        <li class="more-catg"><a href="http://www.buybooksindia.com/business-and-investing-books-c92.php">More...</a></li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="parent" href="#"><img class="icon-menu" alt="Funky roots" src="~/images/13.png">Children Books</a>
+                                        <div style="width: 900px;" class="vertical-dropdown-menu">
+                                            <div class="vertical-groups col-sm-12">
+                                                <div class="mega-group col-sm-12">
+                                                    <h4 class="mega-group-header"><span>Children Books</span></h4>
+                                                    <ul class="group-link-default">
+                                                        <li><a href="http://www.buybooksindia.com/children-s-and-educational-books-s2683.php">Children's and Educational</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/colouring-and-painting-books-s2700.php">Colouring &amp; Painting</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/character-books-books-s2718.php">Character Books</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/english-language-early-readers-books-s2748.php">English Language Early Readers</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/baby-books-books-s2765.php">Baby Books</a></li>
+
+                                                        <li class="more-catg"><a href="http://www.buybooksindia.com/children-books-books-c112.php">More...</a></li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="http://www.buybooksindia.com/college-text-and-reference-books-c470.php"><img src="~/images/14.png" alt="Funky roots" class="icon-menu">College Text &amp; Reference</a></li>
+                                    <li>
+                                        <a class="parent" href="#"><img class="icon-menu" alt="Funky roots" src="~/images/13.png">Computers &amp; Internet</a>
+                                        <div style="width: 900px;" class="vertical-dropdown-menu">
+                                            <div class="vertical-groups col-sm-12">
+                                                <div class="mega-group col-sm-12">
+                                                    <h4 class="mega-group-header"><span>Computers &amp; Internet</span></h4>
+                                                    <ul class="group-link-default">
+                                                        <li><a href="http://www.buybooksindia.com/computer-programming-books-s2690.php">Computer Programming</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/web-design-books-s2696.php">Web Design</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/computer-certification-microsoft-eg-mcse--books-s2716.php">Computer Certification: Microsoft (eg MCSE)</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/mobile-phones-books-s2719.php">Mobile Phones</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/computer-hardware-and-operating-systems-books-s2736.php">Computer Hardware &amp; Operating Systems</a></li>
+
+                                                        <li class="more-catg"><a href="http://www.buybooksindia.com/computers-and-internet-books-c91.php">More...</a></li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="parent" href="#"><img class="icon-menu" alt="Funky roots" src="~/images/13.png">Cooking, Food &amp; Wine</a>
+                                        <div style="width: 900px;" class="vertical-dropdown-menu">
+                                            <div class="vertical-groups col-sm-12">
+                                                <div class="mega-group col-sm-12">
+                                                    <h4 class="mega-group-header"><span>Cooking, Food &amp; Wine</span></h4>
+                                                    <ul class="group-link-default">
+                                                        <li><a href="http://www.buybooksindia.com/fruit-and-vegetables-books-s2714.php">Fruit &amp; Vegetables</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/cakes-baking-icing-and-sugarcraft-books-s2725.php">Cakes | Baking | Icing &amp; Sugarcraft</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/general-cookery-books-s2751.php">General Cookery</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/cookery-or-food-and-drink-etc-books-s2760.php">Cookery or Food &amp; Drink etc</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/food-and-drink-or-cookery-general-interest-books-s2889.php">Food &amp; Drink or Cookery: General Interest</a></li>
+
+                                                        <li class="more-catg"><a href="http://www.buybooksindia.com/cooking-food-and-wine-books-c108.php">More...</a></li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="http://www.buybooksindia.com/educational-and-professional-books-c467.php"><img src="~/images/14.png" alt="Funky roots" class="icon-menu">Educational and Professional</a></li>
+                                    <li>
+                                        <a class="parent" href="#"><img class="icon-menu" alt="Funky roots" src="~/images/13.png">Entertainment</a>
+                                        <div style="width: 900px;" class="vertical-dropdown-menu">
+                                            <div class="vertical-groups col-sm-12">
+                                                <div class="mega-group col-sm-12">
+                                                    <h4 class="mega-group-header"><span>Entertainment</span></h4>
+                                                    <ul class="group-link-default">
+                                                        <li><a href="http://www.buybooksindia.com/puzzles-and-quizzes-books-s2664.php">Puzzles &amp; Quizzes</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/radio-books-s2734.php">Radio</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/hobbies-quizzes-and-games-books-s2817.php">Hobbies | Quizzes &amp; Games</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/magic-tricks-books-s2820.php">Magic Tricks</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/music-books-s2823.php">Music</a></li>
+
+                                                        <li class="more-catg"><a href="http://www.buybooksindia.com/entertainment-books-c102.php">More...</a></li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="parent" href="#"><img class="icon-menu" alt="Funky roots" src="~/images/13.png">Entrance Exams Preparation</a>
+                                        <div style="width: 900px;" class="vertical-dropdown-menu">
+                                            <div class="vertical-groups col-sm-12">
+                                                <div class="mega-group col-sm-12">
+                                                    <h4 class="mega-group-header"><span>Entrance Exams Preparation</span></h4>
+                                                    <ul class="group-link-default">
+                                                        <li><a href="http://www.buybooksindia.com/teacher-recruitment-exams-books-s9510.php">Teacher Recruitment Exams</a></li>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cat-link-orther">
+                                        <a class="parent" href="#"><img class="icon-menu" alt="Funky roots" src="~/images/13.png">Environment &amp; Planning</a>
+                                        <div style="width: 900px;" class="vertical-dropdown-menu">
+                                            <div class="vertical-groups col-sm-12">
+                                                <div class="mega-group col-sm-12">
+                                                    <h4 class="mega-group-header"><span>Environment &amp; Planning</span></h4>
+                                                    <ul class="group-link-default">
+                                                        <li><a href="http://www.buybooksindia.com/energy-resources-books-s8526.php">Energy Resources</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/environmental-policy-and-protocols-books-s8567.php">Environmental Policy &amp; Protocols</a></li>
+
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cat-link-orther">
+                                        <a class="parent" href="#"><img class="icon-menu" alt="Funky roots" src="~/images/13.png">Equestrian &amp; Animal Sports</a>
+                                        <div style="width: 900px;" class="vertical-dropdown-menu">
+                                            <div class="vertical-groups col-sm-12">
+                                                <div class="mega-group col-sm-12">
+                                                    <h4 class="mega-group-header"><span>Equestrian &amp; Animal Sports</span></h4>
+                                                    <ul class="group-link-default">
+                                                        <li><a href="http://www.buybooksindia.com/riding-showjumping-and-horsemanship-books-s8785.php">Riding, Showjumping &amp; Horsemanship</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cat-link-orther">
+                                        <a class="parent" href="#"><img class="icon-menu" alt="Funky roots" src="~/images/13.png">Geography</a>
+                                        <div style="width: 900px;" class="vertical-dropdown-menu">
+                                            <div class="vertical-groups col-sm-12">
+                                                <div class="mega-group col-sm-12">
+                                                    <h4 class="mega-group-header"><span>Geography</span></h4>
+                                                    <ul class="group-link-default">
+                                                        <li><a href="http://www.buybooksindia.com/geographical-information-systems-gis-and-remote-sensing-books-s28.php">Geographical Information Systems (GIS) &amp; Remote Sensing</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/geography-books-s2807.php">Geography</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/natural-disasters-books-s2880.php">Natural Disasters</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/graphology-books-s5274.php">Graphology</a></li>
+
+                                                        <li><a href="http://www.buybooksindia.com/phrenology-and-physiognomy-books-s5275.php">Phrenology &amp; Physiognomy</a></li>
+
+                                                        <li class="more-catg"><a href="http://www.buybooksindia.com/geography-books-c97.php">More...</a></li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="all-category"><span class="open-cate"><a class="show-all" href="javascript:void(0)">Show More Categories</a></span></div>
+                                <div class="all-category all-categoryshw"><span><a class="show-all" href="http://www.buybooksindia.com/allcategories.php">Show All Categories</a></span></div>
+                            </div>
+                        </div>
+                    </div>                <div id="main-menu" class="col-sm-9 main-menu">
+                        <nav class="navbar navbar-default">
+                            <div class="container-fluid">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                        <i class="fa fa-bars"></i>
+                                    </button>
+                                    <a class="navbar-brand" href="#">MENU</a>
+                                </div>
+                                @*<div id="navbar" class="navbar-collapse collapse">
+                                        <ul class="nav navbar-nav">
+                                            <li class=""><a href="http://www.buybooksindia.com/">Home</a></li>
+                                            <li class="dropdown ">
+                                                <a href="javascript:void(0);" class="dropdown-toggle">Authors</a>
+                                                <ul class="dropdown-menu  mega_dropdown" role="menu" style="width: 830px;">
+                                                    <li class="link_container group_header full-txt">
+                                                        <a href="javascript:void(0);">Authors</a>
+                                                    </li>
+                                                    <li class="block-container col-sm-3">
+                                                        <ul class="block">
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/agatha-christie-books-a706.php">Agatha Christie</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/amish-tripathi-books-a12.php">Amish Tripathi</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/anton-chekhov-books-a85751.php">Anton Chekhov</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/charles-dickens-books-a614.php">Charles Dickens</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/douglas-adams-books-a3424.php">Douglas Adams</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/harper-lee-books-a507.php">Harper Lee</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/jules-verne-books-a3396.php">Jules Verne</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/meghana-gulzar-books-a146725.php">Meghana Gulzar</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/paulo-coelho-books-a505.php">Paulo Coelho</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/r-k-narayan-michael-gorra-books-a155251.php">R. K. Narayan Michael Gorra</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/salman-rushdie-books-a531.php">Salman Rushdie</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/sir-arthur-conan-doyle-books-a509.php">Sir Arthur Conan Doyle</a></li>
+                                                            <li class="link_container"><a class="show-all" href="http://www.buybooksindia.com/author-list.php" style="color:#ff571e">Show All Authors</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="block-container col-sm-3">
+                                                        <ul class="block">
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/albert-camus-books-a538.php">Albert Camus</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/amitav-ghosh-books-a987.php">Amitav Ghosh</a></li>
+                                                            <li class="link_container"> <a href="http://www.buybooksindia.com/aparna-jain-books-a16.php">Aparna Jain</a>  </li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/chetan-bhagat-books-a39.php">Chetan Bhagat</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/ernest-hemingway-books-a1294.php">Ernest Hemingway</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/john-steinbeck-books-a53195.php">John Steinbeck</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/jules-verne-jane-smiley-books-a155283.php">Jules Verne Jane Smiley</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/nikita-singh-durjoy-datta-books-a145213.php">Nikita Singh Durjoy Datta</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/preeti-shenoy-books-a172.php">Preeti Shenoy</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/ramachandra-guha-books-a327.php">Ramachandra Guha</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/satyajit-ray-books-a630.php">Satyajit Ray</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/subroto-bagchi-books-a684.php">Subroto Bagchi</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/william-shakespeare-books-a695.php">William Shakespeare</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="block-container col-sm-3">
+                                                        <ul class="block">
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/alexandre-dumas-books-a11873.php">Alexandre Dumas</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/anita-nair-books-a14.php">Anita Nair</a> </li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/arundhati-roy-books-a1164.php">Arundhati Roy</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/devdutt-pattanaik-books-a59.php">Devdutt Pattanaik</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/fyodor-dostoevsky-books-a142257.php">Fyodor Dostoevsky</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/joseph-conrad-books-a1496.php">Joseph Conrad</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/khushwant-singh-books-a383.php">Khushwant Singh</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/oscar-wilde-books-a818.php">Oscar Wilde</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/premchand-books-a801.php">Premchand</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/robin-sharma-books-a787.php">Robin Sharma</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/shashi-tharoor-books-a1351.php">Shashi Tharoor</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/virginia-woolf-books-a825.php">Virginia Woolf</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/alexandre-dumas-pere-books-a155511.php">Alexandre Dumas Pere</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="block-container col-sm-3">
+                                                        <ul class="block">
+                                                            <li class="link_container"> <a href="http://www.buybooksindia.com/ankit-fadia-books-a508.php">Ankit Fadia</a>  </li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/ayn-rand-books-a453.php">Ayn Rand</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/douglas-adams-books-a3424.php">Douglas Adams</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/george-eliot-books-a1494.php">George Eliot</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/joseph-heller-books-a1283.php">Joseph Heller</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/mark-twain-books-a610.php">Mark Twain</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/oscar-wilde-robert-mighall-books-a155327.php">Oscar Wilde Robert Mighall</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/r-k-narayan-books-a179.php">R. K. Narayan</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/ruskin-bond-books-a208.php">Ruskin Bond</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/shobha-de-books-a145330.php">Shobha De</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/vladimir-nabokov-books-a1337.php">Vladimir Nabokov</a></li>
+                                                            <li class="link_container"><a href="http://www.buybooksindia.com/w-somerset-maugham-books-a138395.php">W. Somerset Maugham</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown ">
+                                                <a href="javascript:void(0);" class="dropdown-toggle">Publishers</a>
+                                                <ul class="dropdown-menu mega_dropdown" role="menu" style="width: 688px;">
+                                                    <li class="block-container col-sm-4">
+                                                        <ul class="block">
+
+                                                            <li class="link_container group_header">
+                                                                <a href="http://www.buybooksindia.com/kiran-prakashan-books-r124959.php">Kiran Prakashan</a>
+                                                            </li>
+                                                            <li class="img_container">
+                                                                <a href="http://www.buybooksindia.com/kiran-prakashan-books-r124959.php">
+                                                                    <img class="img-responsive" src="~/images/kiran-publication.jpg" alt="Kiran Prakashan">
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </li>
+                                                    <li class="block-container col-sm-4">
+                                                        <ul class="block">
+
+                                                            <li class="link_container group_header">
+                                                                <a href="http://www.buybooksindia.com/disha-publication-books-r8314.php">Disha Publication</a>
+                                                            </li>
+                                                            <li class="img_container">
+                                                                <a href="http://www.buybooksindia.com/disha-publication-books-r8314.php">
+                                                                    <img class="img-responsive" src="~/images/disha-publication.jpg" alt="Disha Publication">
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </li>
+                                                    <li class="block-container col-sm-4">
+                                                        <ul class="block">
+
+                                                            <li class="link_container group_header">
+                                                                <a href="http://www.buybooksindia.com/rupa-publications-books-r124799.php">Rupa Publication</a>
+                                                            </li>
+                                                            <li class="img_container">
+                                                                <a href="http://www.buybooksindia.com/rupa-publications-books-r124799.php">
+                                                                    <img class="img-responsive" src="~/images/rupa-publications.jpg" alt="Rupa Publication">
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </li>
+                                                    <li class="block-container col-sm-4">
+                                                        <ul class="block">
+
+                                                            <li class="link_container group_header">
+                                                                <a href="http://www.buybooksindia.com/penguin-books-books-r120762.php">Penguin Books India</a>
+                                                            </li>
+                                                            <li class="img_container">
+                                                                <a href="http://www.buybooksindia.com/penguin-books-books-r120762.php">
+                                                                    <img class="img-responsive" src="~/images/penguin-books.jpg" alt="Penguin Books India">
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </li>
+                                                    <li class="block-container col-sm-4">
+                                                        <ul class="block">
+
+                                                            <li class="link_container group_header">
+                                                                <a href="http://www.buybooksindia.com/srishti-publishers-and-distributors-books-r118515.php">Srishti Publishers</a>
+                                                            </li>
+                                                            <li class="img_container">
+                                                                <a href="http://www.buybooksindia.com/srishti-publishers-and-distributors-books-r118515.php">
+                                                                    <img class="img-responsive" src="~/images/srishti-publishers-and-distributors.jpg" alt="Srishti Publishers">
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </li>
+                                                    <li class="block-container col-sm-4">
+                                                        <ul class="block">
+
+                                                            <li class="link_container group_header">
+                                                                <a href="http://www.buybooksindia.com/westland-publications-books-r23053.php">Westland Publications</a>
+                                                            </li>
+                                                            <li class="img_container">
+                                                                <a href="http://www.buybooksindia.com/westland-publications-books-r23053.php">
+                                                                    <img class="img-responsive" src="~/images/westland-publications.jpg" alt="Westland Publications">
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </li>
+                                                    <li class="block-container col-sm-4">
+                                                        <ul class="block">
+
+                                                            <li class="link_container group_header">
+                                                                <a href="http://www.buybooksindia.com/ramesh-publishing-house-books-r118557.php">Ramesh Publishing House</a>
+                                                            </li>
+                                                            <li class="img_container">
+                                                                <a href="http://www.buybooksindia.com/ramesh-publishing-house-books-r118557.php">
+                                                                    <img class="img-responsive" src="~/images/ramesh-publishing-house.jpg" alt="Ramesh Publishing House">
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </li>
+                                                    <li class="block-container col-sm-4">
+                                                        <ul class="block">
+
+                                                            <li class="link_container group_header">
+                                                                <a href="http://www.buybooksindia.com/jaico-publishing-house-books-r1239.php">Jaico Publishing House</a>
+                                                            </li>
+                                                            <li class="img_container">
+                                                                <a href="http://www.buybooksindia.com/jaico-publishing-house-books-r1239.php">
+                                                                    <img class="img-responsive" src="~/images/jaico-publishing-house.jpg" alt="Jaico Publishing House">
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="dropdown ">
+                                                <a href="javascript:void(0);" class="dropdown-toggle">Indian Writing</a>
+                                                <ul class="mega_dropdown dropdown-menu" style="width: 500px;">
+                                                    <li class="link_container group_header full-txt">
+                                                        <a href="javascript:void(0);">Indian Writing</a>
+                                                    </li>
+                                                    <li class="block-container col-sm-3">
+                                                        <ul class="block">
+                                                            <li><a href="http://www.buybooksindia.com/hindi-books-l1.php">Hindi</a></li>
+                                                            <li><a href="http://www.buybooksindia.com/bengali-books-l66.php">Bengali</a></li>
+                                                            <li><a href="http://www.buybooksindia.com/tamil-books-l9.php">Tamil</a></li>
+                                                            <li><a href="http://www.buybooksindia.com/malayalam-books-l8.php">Malayalam</a></li>
+
+                                                        </ul>
+                                                    </li>
+                                                    <li class="block-container col-sm-3">
+                                                        <ul class="block">
+                                                            <li><a href="http://www.buybooksindia.com/marathi-books-l6.php">Marathi</a></li>
+                                                            <li><a href="http://www.buybooksindia.com/telugu-books-l55.php">Telugu</a></li>
+                                                            <li><a href="http://www.buybooksindia.com/kannada-books-l110.php">Kannada</a></li>
+                                                            <li><a href="http://www.buybooksindia.com/gujarati-books-l95.php">Gujarati</a></li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li class="block-container col-sm-6">
+                                                        <ul class="block">
+                                                            <li class="img_container">
+                                                                <img src="~/images/indian-writing.jpg" alt="Indian Writing" height="100" width="200">
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+
+                                            <li class=""><a href="http://www.buybooksindia.com/fiction-books-c465.php">Fiction</a></li>
+                                            <li class=""><a href="http://www.buybooksindia.com/non-fiction-books-c86.php">Non-Fiction</a></li>
+                                            <li class=""><a href="http://www.buybooksindia.com/children-books-books-c112.php">Children Books</a></li>
+                                            <li class=""><a href="http://www.buybooksindia.com/competitive-exam-books-books-p14.php">Competitive Exam Books</a></li>
+                                        </ul>
+
+                                    </div>*@<!--/.nav-collapse -->
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <!-- userinfo on top-->
+                <div id="form-search-opntop">
+                </div>
+                <!-- userinfo on top-->
+                <div id="user-info-opntop">
+                </div>
+                <!-- CART ICON ON MMENU -->
+                <div style="display: none;" id="shopping-cart-box-ontop">
+                    <i class="fa fa-shopping-cart"></i>
+                    <div class="shopping-cart-box-ontop-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('div.srch_qote').mouseover(function () {
+                $("div#srch").show();
+            });
+            $('div.srch_qote').mouseout(function () {
+                $("div#srch").hide();
+            });
+
+
+            $("#tab1").click(function () {
+                $("#searchby").val('Book');
+                $("#srchR").html('Book');
+                $("div#srch").hide();
+            })
+            $("#tab2").click(function () {
+                $("#searchby").val('Author');
+                $("#srchR").html('Author');
+                $("div#srch").hide();
+            })
+            $("#tab3").click(function () {
+                $("#searchby").val('Subject');
+                $("#srchR").html('Subject');
+                $("div#srch").hide();
+            })
+        });
+
+    </script>
+
+
+
+
+
+    <!-- end header -->
+    <!-- page wapper-->
+    <div class="columns-container">
+        <div class="container" id="columns">
+            <!-- breadcrumb -->
+            <div class="breadcrumb clearfix">
+                <a class="home" href="http://www.buybooksindia.com/" title="Return to Home">Home</a>
+                <span class="navigation-pipe">&nbsp;</span>
+                <span class="navigation_page">Computer Certification: Microsoft (eg Mcse)											</span>
+            </div>
+            <!-- ./breadcrumb -->
+            <!-- row -->
+            @Html.Partial("_BooksList", obj)
+            
+        </div>
+        <!-- ./page wapper-->
+        <!-- Footer -->
+        <footer id="footer2">
+
+            @*<script>
+                $(function() {
+                    $("#subscribe").click(function() {
+
+                        var emailId = $("#email_id").val();
+
+                        if (emailId.length == 0) {
+                            $("#eml_err").html('<span style="color:#ff571e;">Please enter your email address!</span>');
+                            return false;
+                        }
+
+                        if (emailId.length != 0) {
+                            if (!ValidateEmail(emailId)) {
+                                $("#eml_err2").html('<span style="color:#ff571e;">Invalid email address.</span>');
+                                return false;
+                            }
+                            else {
+                                $("#eml_err2").fadeOut("slow");
+
+                                $.ajax({
+                                    type: "POST",
+                                    url: "ajax/subscribe_email_save.php",
+                                    data: "email_id=" + emailId,
+                                    success: function(sresult) {
+                                        $("#subresult").html(sresult);
+                                        $("#email_id").val('');
+                                    }
+                                });
+
+                                return false;
+                            }
+                        }
+
+
+                    });
+
+                    $("#email_id").keypress(function() {
+                        $("#eml_err").fadeOut("slow");
+                    });
+
+
+                });
+
+                function ValidateEmail(email) {
+                    var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+                    return expr.test(email);
+                }
+                ;
+
+                        </script>*@
+            <!-- footer paralax-->
+            <div class="footer-paralax">
+                @*<div class="footer-row footer-center">
+                        <div class="container">
+                            <h3>Subscribe to BuyBooksIndia Newsletter</h3>
+                            <form name="" id="subscribe-form" class="form-inline form-subscribe" action="" method="POST">
+                                <div class="form-group">
+                                    <input class="form-control" id="email_id" name="email_id" placeholder="Enter Your E-mail Address" type="text">
+                                    <button type="submit" id="subscribe" class="btn btn-default"><i class="fa fa-paper-plane-o"></i></button>
+                                </div>
+                            </form>
+
+                            <div id="eml_err"></div>
+                            <div id="eml_err2"></div>
+                            <div id="subresult"></div>
+                        </div>
+                    </div>*@
+
+                <!-- ./footer paralax-->
+                <!--footer starts here-->
+
+                <div class="footer-row">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-3 col-md-3">
+                                <div class="widget-container">
+                                    <h3 class="widget-title">Information</h3>
+                                    <div class="widget-body">
+                                        <ul>
+                                            <li><a class="location" href="#">11 Darya Ganj, New Delhi - 110002</a></li>
+                                            <li><a class="phone" href="tel:+911145355555">+91-11-45355555</a></li>
+                                            <li><a class="email" href="mailto:info@buybooksindia.com">info@buybooksindia.com</a></li>
+                                            <!-- <li><a class="mobile" href="#">Hotline: 090 999 8686</a></li>-->
+                                        </ul>
+                                    </div>
+                                    <div class="footer-social">
+                                        <ul>
+                                            <li><a class="facebook" href="http://www.facebook.com/buybooksindia" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a class="twitter" href="https://twitter.com/buybooksindia" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a class="google-plus" href="https://plus.google.com/u/0/b/107709029633302949987/107709029633302949987/posts" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a class="wordpress" href="http://blog.buybooksindia.com/" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3  col-md-2">
+                                <div class="widget-container">
+                                    <h3 class="widget-title">COMPANY</h3>
+                                    <div class="widget-body">
+                                        <ul>
+                                            <li><a href="http://www.buybooksindia.com/about-us.php">About Us</a></li>
+                                            <li><a href="http://www.buybooksindia.com/privacy-policy.php">Privacy Policy</a></li>
+                                            <li><a href="http://www.buybooksindia.com/terms-and-conditions.php">Terms of Use</a></li>
+                                            <li><a href="http://www.buybooksindia.com/disclaimer.php">Disclaimer</a></li>
+                                            <li><a href="http://www.buybooksindia.com/contact-us.php">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-md-2">
+                                <div class="widget-container">
+                                    <h3 class="widget-title">my account</h3>
+                                    <div class="widget-body">
+                                        <ul>
+                                            <li><a href="http://www.buybooksindia.com/control/show-cart.php">My Cart</a></li>
+                                            <li><a href="http://www.buybooksindia.com/control/myorders.php">My Orders</a></li>
+                                            <li><a href="http://www.buybooksindia.com/control/myaddress.php">My Addresses</a></li>
+                                            <li><a href="http://www.buybooksindia.com/control/myaccount.php">My Personal Info</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-md-2">
+                                <div class="widget-container">
+                                    <h3 class="widget-title">SUPPORT</h3>
+                                    <div class="widget-body">
+                                        <ul>
+                                            <li><a href="http://www.buybooksindia.com/how-to-order.php">How to Order</a></li>
+                                            <li><a href="http://www.buybooksindia.com/payments.php">Payment</a></li>
+                                            <li><a href="http://www.buybooksindia.com/shipping-and-delivery.php">Shipping</a></li>
+                                            <li><a href="http://www.buybooksindia.com/returns-and-exchange.php">Return</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 col-md-3 j-widget">
+                                <div style="float:left; background:#fff; padding:3px 3px 2px 3px; border-radius:10px; box-shadow: 02px 3px 3px #aaa;margin-top:10px;">
+                                    <div id="jungleeRatingWidget"> <iframe src="~/Content/iframe.htm" marginwidth="0" marginheight="0" title="junglee.com" scrolling="no" id="jungleeIframe" style="text-align: center; background: rgb(255, 255, 255) none repeat scroll 0% 0%; max-height: 150px;" frameborder="0" height="113" width="127"></iframe></div>
+                                    @*<script type="text/javascript">
+
+                                        (function() {
+
+                                        var jc = document.createElement('script'); jc.type = 'text/javascript'; jc.async = 'true'; jc.src = 'https://junglee.com/esr/js?noDomainCheck=1&sId=A3GL3GAIHUTOIK';
+
+                                        var s = document.getElementsByTagName('script')[0];
+
+                                        s.parentNode.insertBefore(jc, s);
+
+                                        })();
+
+                                                                        </script>*@
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="footer-bottom-wapper">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="footer-coppyright">
+                                        COPYRIGHT © 2010-2015 <a href="http://www.buybooksindia.com/" style="color:#fff;">BUYBOOKSINDIA.COM</a> ONLINE BOOK STORE, INDIA. ALL RIGHTS RESERVED
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="footer-payment-logo">
+                                        <img src="~/images/payment-logo.jpg" alt="payment logo" class="img-responsive">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <a href="#" class="scroll_top" title="Scroll to Top" style="display: none;">Scroll</a>
+    <!-- Script-->
+    <script type="text/javascript" src="~/scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="~/scripts/select2.js"></script>
+    <script type="text/javascript" src="~/scripts/jquery_002.js"></script>
+    <script type="text/javascript" src="~/scripts/owl.js"></script>
+    <script type="text/javascript" src="~/scripts/jquery.js"></script>
+    <script type="text/javascript" src="~/scripts/theme-script.js"></script>
+    <script type="text/javascript" src="~/scripts/jquery-ui.js"></script>
+    <script type="text/javascript" src="~/scripts/jquery-ui-1.js"></script>
+
+    <!--- *******************************Add to Cart ******************************* -->
+
+    <script language="javascript">
+        //$(function() {
+        //	$.ajax({
+        //            type: "POST",
+        //            url: "/cart.php",
+        //            data: "",
+        //            success: function(result_data) {
+        //                $("#bbi_cart").html(result_data);
+        //                return false;
+        //            }
+        //        });
+
+        /*$(".add-to-carta").click(function(e) {
+
+         var product_id = $(this).attr("product-id");
+
+         $.ajax({
+         type:"GET",
+         url:"cart.php",
+         data:"pid="+product_id,
+         success: function(result_data) {
+
+         $("#cart-block").load("cart.php");
+
+
+         }
+         });
+
+         return false;
+         });*/
+
+
+        /*$("#cart-block").mousemove(function() {
+            $.ajax({
+                type: "POST",
+                url: "cart.php",
+                data: "",
+                success: function(result_data) {
+                    $("#bbi_cart").html(result_data);
+                    return false;
+                }
+            });
+
+        });*/
+        //});
+    </script>
+    <script type="text/javascript" src="~/scripts/global.js"></script>
+
+
+
+    <!-- Google Code for Remarketing Tag -->
+    <!--------------------------------------------------
+    Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+    --------------------------------------------------->
+    @*<script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 959264397;
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+        /* ]]> */
+            </script>
+            <script type="text/javascript" src="~/scripts/conversion.js">
+            </script><iframe name="google_conversion_frame" title="Google conversion frame" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/959264397/?random=1457701559374&amp;cv=8&amp;fst=1457701559374&amp;num=1&amp;fmt=1&amp;guid=ON&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_his=1&amp;u_tz=330&amp;u_java=true&amp;u_nplug=10&amp;u_nmime=97&amp;frm=0&amp;url=http%3A//www.buybooksindia.com/computer-certification-microsoft-eg-mcse--books-s2716.php&amp;tiba=Online%20Computer%20certification%3A%20Microsoft%20%28eg%20MCSE%29%20Books%20at%20Low%20Price%20-%20Buy%20Books%20India" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" frameborder="0" height="13" width="300">
+                &lt;img
+                height="1" width="1" border="0" alt=""
+                src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/959264397/?frame=0&amp;random=1457701559374&amp;cv=8&amp;fst=1457701559374&amp;num=1&amp;fmt=1&amp;guid=ON&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_his=1&amp;u_tz=330&amp;u_java=true&amp;u_nplug=10&amp;u_nmime=97&amp;frm=0&amp;url=http%3A//www.buybooksindia.com/computer-certification-microsoft-eg-mcse--books-s2716.php&amp;tiba=Online%20Computer%20certification%3A%20Microsoft%20(eg%20MCSE)%20Books%20at%20Low%20Price%20-%20Buy%20Books%20India"
+                /&gt;
+            </iframe>
+            <noscript>
+                <div style="display:inline;">
+                    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/959264397/?value=0&amp;guid=ON&amp;script=0" />
+                </div>
+            </noscript>*@
+
+
+    <ul style="z-index: 1; top: 0px; left: 0px; display: none;" aria-activedescendant="ui-active-menuitem" role="listbox" class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all"></ul>
+</body>
+</html>

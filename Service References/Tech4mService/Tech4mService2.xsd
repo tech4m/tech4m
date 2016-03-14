@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/tech4mEntity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/tech4mEntity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Video">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="VideoAddedBy" type="xs:int" />
+      <xs:element minOccurs="0" name="VideoAddedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="VideoDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VideoId" type="xs:int" />
+      <xs:element minOccurs="0" name="VideoLargeThumbnail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VideoModifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VideoModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="VideoName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VideoOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VideoShortThumbnail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VideoStatus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="VideoSubCategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="VideoURL" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Video" nillable="true" type="tns:Video" />
+  <xs:complexType name="ArrayOfVideo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Video" nillable="true" type="tns:Video" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVideo" nillable="true" type="tns:ArrayOfVideo" />
+  <xs:complexType name="ArrayOfVideoViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VideoViewModel" nillable="true" type="tns:VideoViewModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVideoViewModel" nillable="true" type="tns:ArrayOfVideoViewModel" />
+  <xs:complexType name="VideoViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="VideoCategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="VideoCategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VideoDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VideoId" type="xs:int" />
+      <xs:element minOccurs="0" name="VideoLargeThumbnail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VideoName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VideoShortThumbnail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VideoSubCategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="VideoSubCategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VideoURL" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VideoViewModel" nillable="true" type="tns:VideoViewModel" />
+  <xs:complexType name="Book">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BookAddedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookAddedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BookAuthor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookCategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="BookCategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookEBook" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BookExtraLarge" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookISBN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookId" type="xs:int" />
+      <xs:element minOccurs="0" name="BookInfoLink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookLarge" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookMedium" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookModifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BookPageCount" type="xs:int" />
+      <xs:element minOccurs="0" name="BookPreviewLink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookPrice" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BookPublishedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BookPublisher" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookSellingCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookSellingStatus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BookSmall" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookSmallThumbnail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookStatus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BookSubCategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="BookSubCategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookThumbnail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookVolumeLink" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Book" nillable="true" type="tns:Book" />
+  <xs:complexType name="ArrayOfBook">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Book" nillable="true" type="tns:Book" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBook" nillable="true" type="tns:ArrayOfBook" />
+  <xs:complexType name="ArrayOfBookSearchViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BookSearchViewModel" nillable="true" type="tns:BookSearchViewModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBookSearchViewModel" nillable="true" type="tns:ArrayOfBookSearchViewModel" />
+  <xs:complexType name="BookSearchViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BookAuthor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookCategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookExtraLarge" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookISBN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookInfoLink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookLarge" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookMedium" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookPageCount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BookPrice" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookPublishedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BookPublisher" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookSearchId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookSellingCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookSmall" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookSmallThumbnail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookSubCategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookThumbnail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookVolumeLink" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BookSearchViewModel" nillable="true" type="tns:BookSearchViewModel" />
+  <xs:complexType name="Category">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryAddedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CategoryAddedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CategoryDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="CategoryModifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CategoryModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CategoryStatus" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Category" nillable="true" type="tns:Category" />
+  <xs:complexType name="ArrayOfCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Category" nillable="true" type="tns:Category" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCategory" nillable="true" type="tns:ArrayOfCategory" />
+  <xs:complexType name="SubCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="Posts" nillable="true" type="tns:ArrayOfPost" />
+      <xs:element minOccurs="0" name="SubCategoryAddedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubCategoryAddedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SubCategoryDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubCategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="SubCategoryModifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubCategoryModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SubCategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubCategoryStatus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UrlSlug" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SubCategory" nillable="true" type="tns:SubCategory" />
+  <xs:complexType name="ArrayOfPost">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Post" nillable="true" type="tns:Post" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPost" nillable="true" type="tns:ArrayOfPost" />
+  <xs:complexType name="Post">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Meta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Modified" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PostedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Published" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ShortDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubCategory" nillable="true" type="tns:SubCategory" />
+      <xs:element minOccurs="0" name="Tags" nillable="true" type="tns:ArrayOfTag" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UrlSlug" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Post" nillable="true" type="tns:Post" />
+  <xs:complexType name="ArrayOfTag">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Tag" nillable="true" type="tns:Tag" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTag" nillable="true" type="tns:ArrayOfTag" />
+  <xs:complexType name="Tag">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Posts" nillable="true" type="tns:ArrayOfPost" />
+      <xs:element minOccurs="0" name="UrlSlug" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Tag" nillable="true" type="tns:Tag" />
+  <xs:complexType name="ArrayOfSubCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SubCategory" nillable="true" type="tns:SubCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSubCategory" nillable="true" type="tns:ArrayOfSubCategory" />
+  <xs:complexType name="InterviewQuestion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="InterviewQuestionAddedBy" type="xs:int" />
+      <xs:element minOccurs="0" name="InterviewQuestionAddedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InterviewQuestionId" type="xs:int" />
+      <xs:element minOccurs="0" name="InterviewQuestionStatus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="InterviewQuestionSubCategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="InterviewQuestionTitle" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InterviewQuestion" nillable="true" type="tns:InterviewQuestion" />
+  <xs:complexType name="ArrayOfInterviewQuestion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InterviewQuestion" nillable="true" type="tns:InterviewQuestion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInterviewQuestion" nillable="true" type="tns:ArrayOfInterviewQuestion" />
+  <xs:complexType name="InterviewQuestionAnswer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="InterviewQuestionAnswerAddedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InterviewQuestionAnswerAddedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InterviewQuestionAnswerDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InterviewQuestionAnswerId" type="xs:int" />
+      <xs:element minOccurs="0" name="InterviewQuestionAnswerStatus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="InterviewQuestionId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InterviewQuestionAnswer" nillable="true" type="tns:InterviewQuestionAnswer" />
+  <xs:complexType name="InterviewQuestionAnswerViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="InterviewQuestionAnswers" nillable="true" type="tns:ArrayOfInterviewQuestionAnswer" />
+      <xs:element minOccurs="0" name="InterviewQuestionCategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="InterviewQuestionCategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InterviewQuestionId" type="xs:int" />
+      <xs:element minOccurs="0" name="InterviewQuestionSubCategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="InterviewQuestionSubCategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InterviewQuestionTitle" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InterviewQuestionAnswerViewModel" nillable="true" type="tns:InterviewQuestionAnswerViewModel" />
+  <xs:complexType name="ArrayOfInterviewQuestionAnswer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InterviewQuestionAnswer" nillable="true" type="tns:InterviewQuestionAnswer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInterviewQuestionAnswer" nillable="true" type="tns:ArrayOfInterviewQuestionAnswer" />
+  <xs:complexType name="Article">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArticleAddedBy" type="xs:int" />
+      <xs:element minOccurs="0" name="ArticleAddedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ArticleCategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="ArticleCategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ArticleDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ArticleId" type="xs:int" />
+      <xs:element minOccurs="0" name="ArticleModifiedBy" type="xs:int" />
+      <xs:element minOccurs="0" name="ArticleModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ArticleStatus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ArticleSubCategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="ArticleSubCategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ArticleTitle" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Article" nillable="true" type="tns:Article" />
+  <xs:complexType name="ArrayOfArticle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Article" nillable="true" type="tns:Article" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArticle" nillable="true" type="tns:ArrayOfArticle" />
+</xs:schema>

@@ -1,0 +1,968 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Books Home</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/select2.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/owl.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/reset.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/responsive.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/option3.css">
+    <script src="~/Scripts/js" async="" type="text/javascript"></script>
+    <script src="~/Scripts/fbds.js" async=""></script>
+    <script src="~/Scripts/gtm.htm" async=""></script>
+    <script src="~/Scripts/dc.js" async="" type="text/javascript"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-1.js"></script>
+
+    <!---------------------------- Code for autocomplete search --------------------------------->
+    <script type="text/javascript"> window.$ = window.jQuery = jQuery;</script>
+    <link href="~/Content/css.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        var searchby = '';
+        function srchAutoComplete() {
+            $("#keyword").unbind("autocomplete");
+            $("#keyword").autocomplete({
+                source: "/ajax/global_search.php?searchby=" + searchby,
+                minLength: 2,
+                select: function (event, ui) {
+                    var getUrl = ui.item.id;
+                    if (getUrl != '#') {
+                        location.href = getUrl;
+                    }
+                },
+                html: true,
+                open: function (event, ui) {
+                    $(".ui-autocomplete").css("z-index", 1000);
+                }
+            });
+        }
+        $(function () {
+
+            $('form#form1 #searchby').change(function (e) {
+                searchby = $(this).val();
+                srchAutoComplete();
+
+            })
+            // searchby = $('form#form1 #searchby').val();
+
+            srchAutoComplete();
+
+        });
+    </script>
+
+    <!----------------------------End of code for autocomplete search --------------------------------->
+
+    <title>Indian Bookstore Online, Buy Books Online India, Online Books Shopping</title>
+    <meta name="description" content="Online Indian Bookstore with best discounts and fast Shipping in India. Buy books and novels online with Cash on Delivery facility in India.">
+    <meta name="keywords" content="best books India, books to read, online books shopping, indian bookstore online, buy novels online, buy books online India, online bookstore, online library">
+    <link rel="shortcut icon" href="http://www.buybooksindia.com/assets/images/favicon.ico">
+    <link href="https://plus.google.com/108051757296355349581" rel="publisher">
+    <link rel="canonical" href="http://www.buybooksindia.com/">
+    <meta name="ROBOTS" content="INDEX, FOLLOW">
+    <script type="text/javascript">
+        $(window).load(function () {
+            $("#loader").fadeOut("slow");
+        })
+    </script>
+    <style>
+        #loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url('./assets/images/buybooksindiaisloading.png') 50% 50% no-repeat rgb(249,249,249);
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-10130255-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+
+    </script>
+
+    <!-- Google Tag Manager -->
+
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-TSJ67K"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+
+                new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+
+        })(window, document, 'script', 'dataLayer', 'GTM-TSJ67K');</script>
+
+    <!-- End Google Tag Manager -->
+
+    <script>
+        (function () {
+            var _fbq = window._fbq || (window._fbq = []);
+            if (!_fbq.loaded) {
+                var fbds = document.createElement('script');
+                fbds.async = true;
+                fbds.src = '//connect.facebook.net/en_US/fbds.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(fbds, s);
+                _fbq.loaded = true;
+            }
+            _fbq.push(['addPixelId', '1730507033841817']);
+        })();
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', 'PixelInitialized', {}]);
+    </script>
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1730507033841817&amp;ev=PixelInitialized" /></noscript>
+</head>
+<body class="home option2 option3">
+    <!-- HEADER -->
+    <div style="display: none;" id="loader"></div>
+    <div id="global">
+        <div id="tutorialslibrary">
+            <h1 class="thick-heading">|| Interview Question ||</h1>
+            <h4 style="font-size:20px; position:relative;" class="center">Free Online Tutorials &amp; Courses</h4>
+        </div>
+        <div class="container">
+            <div class="row featured-boxes">
+                <div class="col-md-3">
+                    <div class="featured-box" style="height: 3772px;">
+                        <h4>Java Technologies</h4>
+                        <ul id="java_technologies" class="menu">
+                            <li><a title="Learn Apache ANT" href="/ant/index.htm" target="_top">Learn Apache Ant</a></li>
+                            <li><a title="Learn Apache POI (Powerpoint)" href="/apache_poi_ppt/index.htm" target="_top">Learn Apache POI (Powerpoint)</a></li>
+                            <li><a title="Learn Apache POI (Word)" href="/apache_poi_word/index.htm" target="_top">Learn Apache POI (Word)</a></li>
+                            <li><a title="Learn Apache POI" href="/apache_poi/index.htm" target="_top">Learn Apache POI</a></li>
+                            <li><a title="Learn AWT" href="/awt/index.htm" target="_top">Learn AWT</a></li>
+                            <li><a title="Learn Design Patterns in Java" href="/design_pattern/index.htm" target="_top">Learn Design Patterns</a></li>
+                            <li><a title="Learn EasyMock" href="/easymock/index.htm" target="_top">Learn EasyMock</a></li>
+                            <li><a title="Learn Eclipse" href="/eclipse/index.htm" target="_top">Learn Eclipse</a></li>
+                            <li><a title="Learn EJB" href="/ejb/index.htm" target="_top">Learn EJB</a></li>
+                            <li><a title="Learn Guava" href="/guava/index.htm" target="_top">Learn Guava</a></li>
+                            <li><a title="Learn Hibernate" href="/hibernate/index.htm" target="_top">Learn Hibernate</a></li>
+                            <li><a title="Learn iBATIS" href="/ibatis/index.htm" target="_top">Learn iBATIS</a></li>
+                            <li><a title="Learn Jackson" href="/jackson/index.htm" target="_top">Learn Jackson</a></li>
+                            <li><a title="Learn JasperReports" href="/jasper_reports/index.htm" target="_top">Learn JasperReports</a></li>
+                            <li><a title="Learn Java XML" href="/java_xml/index.htm" target="_top">Learn Java XML</a></li>
+                            <li><a title="Learn Java" href="/java/index.htm" target="_top">Learn Java</a></li>
+                            <li><a title="Learn Jbpm5" href="/jbpm5/index.htm" target="_top">Learn Jbpm5</a></li>
+                            <li><a title="Learn Java.io Package" href="/java/io/index.htm" target="_top">Java.io Package</a></li>
+                            <li><a title="Java Interview Questions" href="/java/java_interview_questions.htm" target="_top">Java Interview Questions</a></li>
+                            <li><a title="Learn Java.lang Package" href="/java/lang/index.htm" target="_top">Java.lang Package</a></li>
+                            <li><a title="Learn Java.math Package" href="/java/math/index.htm" target="_top">Java.math Package</a></li>
+                            <li><a title="Learn Java.util Package" href="/java/util/index.htm" target="_top">Java.util Package</a></li>
+                            <li><a title="Learn Java-8" href="/java8/index.htm" target="_top">Learn Java-8</a></li>
+                            <li><a title="Java  Examples" href="/javaexamples/index.htm" target="_top">Java Examples</a></li>
+                            <li><a title="Learn JavaMail API" href="/javamail_api/index.htm" target="_top">Learn JavaMail API</a></li>
+                            <li><a title="Learn JDB" href="/jdb/index.htm" target="_top">Learn JDB</a></li>
+                            <li><a title="Learn JDBC" href="/jdbc/index.htm" target="_top">Learn JDBC</a></li>
+                            <li><a title="Learn JFreeChart" href="/jfreechart/index.htm" target="_top">Learn JFreeChart</a></li>
+                            <li><a title="Learn jmeter" href="/jmeter/index.htm" target="_top">Learn jMeter</a></li>
+                            <li><a title="Learn JOGL" href="/jogl/index.htm" target="_top">Learn JOGL</a></li>
+                            <li><a title="Learn JPA" href="/jpa/index.htm" target="_top">Learn JPA</a></li>
+                            <li><a title="Learn JSON" href="/json/index.htm" target="_top">Learn JSON</a></li>
+                            <li><a title="Learn JSP" href="/jsp/index.htm" target="_top">Learn JSP</a></li>
+                            <li><a title="Learn JUnit" href="/junit/index.htm" target="_top">Learn JUnit</a></li>
+                            <li><a title="Learn log4j" href="/log4j/index.htm" target="_top">Learn log4j</a></li>
+                            <li><a title="Learn Lucene" href="/lucene/index.htm" target="_top">Learn Lucene</a></li>
+                            <li><a title="Learn Maven" href="/maven/index.htm" target="_top">Learn Maven</a></li>
+                            <li><a title="Learn Servlets" href="/servlets/index.htm" target="_top">Learn Servlets</a></li>
+                            <li><a title="Learn Spring" href="/spring/index.htm" target="_top">Learn Spring</a></li>
+                            <li><a title="Learn Struts 2" href="/struts_2/index.htm" target="_top">Learn Struts 2.x</a></li>
+                            <li><a title="Learn Swing" href="/swing/index.htm" target="_top">Learn Swing</a></li>
+                            <li><a title="Learn TestNG" href="/testng/index.htm" target="_top">Learn TestNG</a></li>
+                            <li><a title="Learn Apache Tika" href="/tika/index.htm" target="_top">Learn Apache Tika</a></li>
+                            <li><a title="Learn Apache Xerces" href="/xerces/index.htm" target="_top">Learn Apache Xerces</a></li>
+                            <li><a title="Learn XStream" href="/xstream/index.htm" target="_top">Learn XStream</a></li>
+                        </ul>
+                        <h4>Digital Marketing</h4>
+                        <ul id="digital_marketing" class="menu">
+                            <li><a title="Learn A/B Testing" href="/ab_testing/index.htm" target="_top">Learn A/B Testing</a></li>
+                            <li><a title="Content Marketing" href="/content_marketing/index.htm" target="_top">Content Marketing</a></li>
+                            <li><a title="Learn Pay Per Click" href="/pay_per_click/index.htm" target="_top">Learn Pay Per Click</a></li>
+                            <li><a title="Learn Mobile Marketing" href="/mobile_marketing/index.htm" target="_top">Learn Mobile Marketing</a></li>
+                            <li><a title="Learn Online Marketing" href="/online_marketing/index.htm" target="_top">Learn Online Marketing</a></li>
+                            <li><a title="Learn Search Engine Optimization" href="/seo/index.htm" target="_top">Learn SEO Techniques</a></li>
+                            <li><a title="Learn Social Media Marketing" href="/social_media_marketing/index.htm" target="_top">Learn Social Media Marketing</a></li>
+                            <li><a title="Learn Web Analytics" href="/web_analytics/index.htm" target="_top">Learn Web Analytics</a></li>
+                        </ul>
+                        <h4>Databases</h4>
+                        <ul id="database_tutorials" class="menu">
+                            <li><a title="Learn CouchDB" href="/couchdb/index.htm" target="_top">Learn CouchDB</a></li>
+                            <li><a title="Learn DB2" href="/db2/index.htm" target="_top">Learn DB2</a></li>
+                            <li><a title="Learn DocumentDB" href="/documentdb/index.htm" target="_top">Learn DocumentDB</a></li>
+                            <li><a title="Learn IMS DB" href="/ims_db/index.htm" target="_top">Learn IMS DB</a></li>
+                            <li><a title="Learn Memcached" href="/memcached/index.htm" target="_top">Learn Memcached</a></li>
+                            <li><a title="Learn MongoDB" href="/mongodb/index.htm" target="_top">Learn MongoDB</a></li>
+                            <li><a title="Learn MySQL" href="/mysql/index.htm" target="_top">Learn MySQL</a></li>
+                            <li><a title="Learn Neo4J" href="/neo4j/index.htm" target="_top">Learn Neo4J</a></li>
+                            <li><a title="Learn OBIEE" href="/obiee/index.htm" target="_top">Learn OBIEE</a></li>
+                            <li><a title="Learn PL/SQL" href="/plsql/index.htm" target="_top">Learn PL/SQL</a></li>
+                            <li><a title="Learn PostgreSQL" href="/postgresql/index.htm" target="_top">Learn PostgreSQL</a></li>
+                            <li><a title="Learn Redis" href="/redis/index.htm" target="_top">Learn Redis</a></li>
+                            <li><a title="SQL Certification" href="/sql_certificate/index.htm" target="_top">SQL Certification</a></li>
+                            <li><a title="Learn SQL" href="/sql/index.htm" target="_top">Learn SQL</a></li>
+                            <li><a title="Learn SQLite" href="/sqlite/index.htm" target="_top">Learn SQLite</a></li>
+                        </ul>
+                        <h4>Sports</h4>
+                        <ul id="sports_tutorials" class="menu">
+                            <li><a title="Archery" href="/archery/index.htm" target="_top">Archery</a></li>
+                            <li><a title="American Football" href="/american_football/index.htm" target="_top">American Football</a></li>
+                            <li><a title="Badminton" href="/badminton/index.htm" target="_top">Badminton</a></li>
+                            <li><a title="Baseball" href="/baseball/index.htm" target="_top">Baseball</a></li>
+                            <li><a title="Downhill Skiing" href="/downhill_skiing/index.htm" target="_top">Downhill Skiing</a></li>
+                            <li><a title="Boxing" href="/boxing/index.htm" target="_top">Boxing</a></li>
+                            <li><a title="Carrom" href="/carrom/index.htm" target="_top">Carrom</a></li>
+                            <li><a title="Cricket" href="/cricket/index.htm" target="_top">Cricket</a></li>
+                            <li><a title="Cycling" href="/cycling/index.htm" target="_top">Cycling</a></li>
+                            <li><a title="Darts" href="/darts/index.htm" target="_top">Darts</a></li>
+                            <li><a title="Handball" href="/handball/index.htm" target="_top">Handball</a></li>
+                            <li><a title="Football" href="/football/index.htm" target="_top">Football</a></li>
+                            <li><a title="Formula One" href="/formula_one/index.htm" target="_top">Formula One</a></li>
+                            <li><a title="Ice Hockey" href="/ice_hockey/index.htm" target="_top">Ice Hockey</a></li>
+                            <li><a title="Karate" href="/karate/index.htm" target="_top">Karate</a></li>
+                            <li><a title="Race Walking" href="/racewalking/index.htm" target="_top">Race Walking</a></li>
+                        </ul>
+                        <h4>Competitive Exams</h4>
+                        <ul id="exams_tutorials" class="menu">
+                            <li><a title="Current Affairs December 2015" href="/current_affairs_december_2015/index.htm" target="_top">Current Affairs</a></li>
+                            <li><a title="Quantitative Aptitude" href="/quantitative_aptitude/index.htm" target="_top">Quantitative Aptitude</a></li>
+                            <li><a title="Geography" href="/geography/index.htm" target="_top">Geography</a></li>
+                        </ul>
+                        <h4>Video Tutorials</h4>
+                        <ul id="video_tutorials" class="menu">
+                            <li><a href="/video_tutorials/ms_word_2010/WRD-T" target="_top">MS Word 2010</a></li>
+                            <li><a href="/video_tutorials/ms_excel_2010/EXL-T" target="_top">MS Excel 2010</a></li>
+                            <li><a href="/video_tutorials/ms_power_point_2010/PPT-T" target="_top">MS Power Point 2010</a></li>
+                            <li><a href="/video_tutorials/java_programming/PIJ-T" target="_top">Java Programming</a></li>
+                            <li><a href="/video_tutorials/programming_using_c/PUC-T" target="_top">Programming using C</a></li>
+                            <li><a href="/video_tutorials/programming_using_cplusplus/PCP-T" target="_top">Programming using C++</a></li>
+                            <li><a href="/video_tutorials/data_structures_and_algorithms/DS-T" target="_top">Data Structures &amp; Algorithms</a></li>
+                            <!--
+                            <li><a target="_top" href="/video_tutorials/introduction_to_algorithms/MIT06">Introduction to Algorithms</a></li>
+                            <li><a target="_top" href="/video_tutorials/computer_system_engineering/MIT08">Computer System Engineering</a></li>
+                            <li><a target="_top" href="/video_tutorials/artificial_intelligence/MIT09">Artificial Intelligence</a></li>
+                            -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="featured-box" style="height: 3772px;">
+                        <h4>Programming</h4>
+                        <ul id="programming" class="menu">
+                            <li><a title="Learn Apex Programming" href="/apex/index.htm" target="_top">Learn Apex</a></li>
+                            <li><a title="Learn Assembly Programming" href="/assembly_programming/index.htm" target="_top">Learn Assembly</a></li>
+                            <li><a title="Learn Awk Programming" href="/awk/index.htm" target="_top">Learn Awk</a></li>
+                            <li><a title="C Standard Library" href="/c_standard_library/index.htm" target="_top">C Standard Library</a></li>
+                            <li><a title="Learn COBOL" href="/cobol/index.htm" target="_top">Learn COBOL</a></li>
+                            <li><a title="Learn C++" href="/cplusplus/index.htm" target="_top">Learn C++</a></li>
+                            <li><a title="Learn C Programming" href="/cprogramming/index.htm" target="_top">Learn C</a></li>
+                            <li><a title="Learn C#" href="/csharp/index.htm" target="_top">Learn C#</a></li>
+                            <li><a title="Learn Data Structure &amp; Algorithms" href="/data_structures_algorithms/index.htm" target="_top">Data Structure &amp; Algorithms</a></li>
+                            <li><a title="Learn D Programming" href="/d_programming/index.htm" target="_top">Learn D</a></li>
+                            <li><a title="Learn Euphoria" href="/euphoria/index.htm" target="_top">Learn Euphoria</a></li>
+                            <li><a title="Learn F#" href="/fsharp/index.htm" target="_top">Learn F#</a></li>
+                            <li><a title="Learn Fortran" href="/fortran/index.htm" target="_top">Learn Fortran</a></li>
+                            <li><a title="Learn Go Programing" href="/go/index.htm" target="_top">Learn Go Programing</a></li>
+                            <li><a title="Learn Groovy Programing" href="/groovy/index.htm" target="_top">Learn Groovy</a></li>
+                            <li><a title="Learn Java" href="/java/index.htm" target="_top">Learn Java</a></li>
+                            <li><a title="Learn Java-8" href="/java8/index.htm" target="_top">Learn Java-8</a></li>
+                            <li><a title="Learn JCL" href="/jcl/index.htm" target="_top">Learn JCL</a></li>
+                            <li><a title="Learn LISP" href="/lisp/index.htm" target="_top">Learn LISP</a></li>
+                            <li><a title="Learn MATLAB" href="/matlab/index.htm" target="_top">Learn MATLAB</a></li>
+                            <li><a title="Learn Node.js" href="/nodejs/index.htm" target="_top">Learn Node.js</a></li>
+                            <li><a title="Learn Objective C Programming" href="/objective_c/index.htm" target="_top">Learn Objective C</a></li>
+                            <li><a title="Learn Pascal Programming" href="/pascal/index.htm" target="_top">Learn Pascal</a></li>
+                            <li><a title="Learn R Programming" href="/r/index.htm" target="_top">Learn R Programming</a></li>
+                            <li><a title="Learn Swift Programming" href="/swift/index.htm" target="_top">Learn Swift</a></li>
+                            <li><a title="Learn Scala" href="/scala/index.htm" target="_top">Learn Scala</a></li>
+                            <li><a title="Learn vb.net" href="/vb.net/index.htm" target="_top">Learn VB.Net</a></li>
+                            <li><a title="Learn VBA" href="/vba/index.htm" target="_top">Learn VBA</a></li>
+                        </ul>
+                        <h4>Big Data &amp; Analytics</h4>
+                        <ul id="big_data" class="menu">
+                            <li><a title="Learn Apache Flume" href="/apache_flume/index.htm" target="_top">Learn Apache Flume</a></li>
+                            <li><a title="Learn Apache Pig" href="/apache_pig/index.htm" target="_top">Learn Apache Pig</a></li>
+                            <li><a title="Learn Apache Spark" href="/apache_spark/index.htm" target="_top">Learn Apache Spark</a></li>
+                            <li><a title="Learn Apache Storm" href="/apache_storm/index.htm" target="_top">Learn Apache Storm</a></li>
+                            <li><a title="Learn Spark SQL" href="/spark_sql/index.htm" target="_top">Learn Spark SQL</a></li>
+                            <li><a title="Learn Avro" href="/avro/index.htm" target="_top">Learn Avro</a></li>
+                            <li><a title="Learn CouchDB" href="/couchdb/index.htm" target="_top">Learn CouchDB</a></li>
+                            <li><a title="Learn Cassandra" href="/cassandra/index.htm" target="_top">Learn Cassandra</a></li>
+                            <li><a title="Learn Hadoop" href="/hadoop/index.htm" target="_top">Learn Hadoop</a></li>
+                            <li><a title="Learn HCatalog" href="/hcatalog/index.htm" target="_top">Learn HCatalog</a></li>
+                            <li><a title="Learn Hive" href="/hive/index.htm" target="_top">Learn Hive</a></li>
+                            <li><a title="Learn HBase" href="/hbase/index.htm" target="_top">Learn HBase</a></li>
+                            <li><a title="Learn Map Reduce" href="/map_reduce/index.htm" target="_top">Learn Map Reduce</a></li>
+                            <li><a title="Learn Mahout" href="/mahout/index.htm" target="_top">Learn Mahout</a></li>
+                            <li><a title="Learn Penthaho" href="/pentaho/index.htm" target="_top">Learn Pentaho</a></li>
+                            <li><a title="Learn QlikView" href="/qlikview/index.htm" target="_top">Learn QlikView</a></li>
+                            <li><a title="Learn R Programming" href="/r/index.htm" target="_top">Learn R Programming</a></li>
+                            <li><a title="Learn SAS" href="/sas/index.htm" target="_top">Learn SAS</a></li>
+                            <li><a title="Learn Sqoop" href="/sqoop/index.htm" target="_top">Learn Sqoop</a></li>
+                            <li><a title="Learn Statistics" href="/statistics/index.htm" target="_top">Learn Statistics</a></li>
+                            <li><a title="Learn Tableau" href="/tableau/index.htm" target="_top">Learn Tableau</a></li>
+                            <li><a title="Learn Zookeeper" href="/zookeeper/index.htm" target="_top">Learn Zookeeper</a></li>
+                        </ul>
+                        <h4>Mainframe Development</h4>
+                        <ul id="mainfarme" class="menu">
+                            <li><a title="Learn CICS" href="/cics/index.htm" target="_top">Learn CICS</a></li>
+                            <li><a title="Learn COBOL" href="/cobol/index.htm" target="_top">Learn COBOL</a></li>
+                            <li><a title="Learn DB2" href="/db2/index.htm" target="_top">Learn DB2</a></li>
+                            <li><a title="Learn IMS DB" href="/ims_db/index.htm" target="_top">Learn IMS DB</a></li>
+                            <li><a title="Learn JCL" href="/jcl/index.htm" target="_top">Learn JCL</a></li>
+                            <li><a title="Learn VSAM" href="/vsam/index.htm" target="_top">Learn VSAM</a></li>
+                        </ul>
+                        <h4>Microsoft Technologies</h4>
+                        <ul id="microsoft_technologies" class="menu">
+                            <li><a title="Learn ASP.Net" href="/asp.net/index.htm" target="_top">Learn ASP.Net</a></li>
+                            <li><a title="Learn Batch Script" href="/batch_script/index.htm" target="_top">Learn Batch Script</a></li>
+                            <li><a title="Learn C#" href="/csharp/index.htm" target="_top">Learn C#</a></li>
+                            <li><a title="Learn Excel" href="/excel/index.htm" target="_top">Learn Excel</a></li>
+                            <li><a title="Learn Advanced Excel" href="/advanced_excel/index.htm" target="_top">Learn Advanced Excel</a></li>
+                            <li><a title="Learn Entity Framework" href="/entity_framework/index.htm" target="_top">Learn Entity Framework</a></li>
+                            <li><a title="Learn F#" href="/fsharp/index.htm" target="_top">Learn F#</a></li>
+                            <li><a title="Learn LinQ" href="/linq/index.htm" target="_top">Learn LinQ</a></li>
+                            <li><a title="Learn Microsoft Azure" href="/microsoft_azure/index.htm" target="_top">Learn Microsoft Azure</a></li>
+                            <li><a title="Learn Powerpoint" href="/powerpoint/index.htm" target="_top">Learn Powerpoint</a></li>
+                            <li><a title="Learn Microsoft Project" href="/ms_project/index.htm" target="_top">Learn Microsoft Project</a></li>
+                            <li><a title="Learn MVVM" href="/mvvm/index.htm" target="_top">Learn MVVM</a></li>
+                            <li><a title="Learn Silverlight" href="/silverlight/index.htm" target="_top">Learn Silverlight</a></li>
+                            <li><a title="Learn VBA" href="/vba/index.htm" target="_top">Learn VBA</a></li>
+                            <li><a title="Learn vb.net" href="/vb.net/index.htm" target="_top">Learn VB.Net</a></li>
+                            <li><a title="Learn WCF" href="/wcf/index.htm" target="_top">Learn WCF</a></li>
+                            <li><a title="Learn Word" href="/word/index.htm" target="_top">Learn Word</a></li>
+                            <li><a title="Learn WPF" href="/wpf/index.htm" target="_top">Learn WPF</a></li>
+                            <li><a title="Learn XAML" href="/xaml/index.htm" target="_top">Learn XAML</a></li>
+                            <li><a title="Learn Windows 10 Development" href="/windows10_development/index.htm" target="_top">Windows 10 Development</a></li>
+                        </ul>
+                        <h4>Mobile Development</h4>
+                        <ul id="mobile_development" class="menu">
+                            <li class="android"><a title="Learn Android" href="/android/index.htm" target="_top">Learn Android</a></li>
+                            <li class="android"><a title="Learn Cordova" href="/cordova/index.htm" target="_top">Learn Cordova</a></li>
+                            <li><a title="Learn iOS" href="/ios/index.htm" target="_top">Learn iOS</a></li>
+                            <li><a title="jquery Mobile" href="/jquery_mobile/index.htm" target="_top">Learn jQuery Mobile</a></li>
+                            <li><a title="Learn Ionic" href="/ionic/index.htm" target="_top">Learn Ionic</a></li>
+                            <li><a title="Learn Meteor" href="/meteor/index.htm" target="_top">Learn Meteor</a></li>
+                            <li><a title="Learn PhoneGap" href="/phonegap/index.htm" target="_top">Learn PhoneGap</a></li>
+                            <li><a title="Learn SL4A" href="/sl4a/index.htm" target="_top">Learn SL4A</a></li>
+                        </ul>
+                        <h4>Telecom</h4>
+                        <ul id="telecom" class="menu">
+                            <li><a title="Learn 5G" href="/5g/index.htm" target="_top">Learn 5G</a></li>
+                            <li><a title="Learn CDMA" href="/cdma/index.htm" target="_top">Learn CDMA</a></li>
+                            <li><a title="Learn GPRS" href="/gprs/index.htm" target="_top">Learn GPRS</a></li>
+                            <li><a title="Learn GSM" href="/gsm/index.htm" target="_top">Learn GSM</a></li>
+                            <li><a title="Learn i-mode" href="/i-mode/index.htm" target="_top">Learn i-Mode</a></li>
+                            <li><a title="Learn LTE" href="/lte/index.htm" target="_top">Learn LTE</a></li>
+                            <li><a title="Learn NGN" href="/ngn/index.htm" target="_top">Learn NGN</a></li>
+                            <li><a title="Learn Session Initiation Protocol" href="/session_initiation_protocol/index.htm" target="_top">Learn SIP</a></li>
+                            <li><a title="Learn Telecom Billing" href="/telecom-billing/index.htm" target="_top">Learn Telecom Billing</a></li>
+                            <li><a title="Learn UMTS" href="/umts/index.htm" target="_top">Learn UMTS</a></li>
+                            <li><a title="Learn WAP" href="/wap/index.htm" target="_top">Learn WAP</a></li>
+                            <li><a title="Learn Wi-Fi" href="/wi-fi/index.htm" target="_top">Learn Wi-Fi</a></li>
+                            <li><a title="Learn WiMAX" href="/wimax/index.htm" target="_top">Learn WiMAX</a></li>
+                            <li><a title="Learn WML" href="/wml/index.htm" target="_top">Learn WML</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="featured-box" style="height: 3772px;">
+                        <h4>Web Development</h4>
+                        <ul id="web_development" class="menu">
+                            <li><a title="Learn Ajax" href="/ajax/index.htm" target="_top">Learn Ajax</a></li>
+                            <li><a title="Learn AngularJS" href="/angularjs/index.htm" target="_top">Learn AngularJS</a></li>
+                            <li><a title="Learn Angular Material" href="/angular_material/index.htm" target="_top">Learn Angular Material</a></li>
+                            <li><a title="Learn ASP.Net" href="/asp.net/index.htm" target="_top">Learn ASP.Net</a></li>
+                            <li><a title="Learn BackboneJS" href="/backbonejs/index.htm" target="_top">Learn BackboneJS</a></li>
+                            <li><a title="bootstrap" href="/bootstrap/index.htm" target="_top">Learn Bootstrap</a></li>
+                            <li><a title="Learn CSS" href="/css/index.htm" target="_top">Learn CSS</a></li>
+                            <li><a title="Learn Codeigniter" href="/codeigniter/index.htm" target="_top">Learn Codeigniter</a></li>
+                            <li><a title="Learn Drupal" href="/drupal/index.htm" target="_top">Learn Drupal</a></li>
+                            <li><a title="Learn Django" href="/django/index.htm" target="_top">Learn Django</a></li>
+                            <li><a title="Learn EmberJS" href="/emberjs/index.htm" target="_top">Learn EmberJS</a></li>
+                            <li><a title="Learn Flask" href="/flask/index.htm" target="_top">Learn Flask</a></li>
+                            <li><a title="Learn Adobe Flex" href="/flex/index.htm" target="_top">Learn Adobe Flex</a></li>
+                            <li><a title="Learn Foundation" href="/foundation/index.htm" target="_top">Learn Foundation</a></li>
+                            <li><a title="Learn Grav" href="/grav/index.htm" target="_top">Learn Grav</a></li>
+                            <li><a title="Learn Grunt" href="/grunt/index.htm" target="_top">Learn Grunt</a></li>
+                            <li><a title="Learn Grav" href="/gulp/index.htm" target="_top">Learn Gulp</a></li>
+                            <li><a title="Learn Google Web Toolkit" href="/gwt/index.htm" target="_top">Learn GWT</a></li>
+                            <li><a title="Learn Google Maps" href="/google_maps/index.htm" target="_top">Learn Google Maps</a></li>
+                            <li><a title="Learn HTML" href="/html/index.htm" target="_top">Learn HTML</a></li>
+                            <li><a title="Learn HTML5" href="/html5/index.htm" target="_top">Learn HTML5</a></li>
+                            <li><a title="Learn HTTP" href="/http/index.htm" target="_top">Learn HTTP</a></li>
+                            <li><a title="Learn Highcharts" href="/highcharts/index.htm" target="_top">Learn Highcharts</a></li>
+                            <li><a title="Learn JavaScript" href="/javascript/index.htm" target="_top">Learn JavaScript</a></li>
+                            <li><a title="Learn Joomla" href="/joomla/index.htm" target="_top">Learn Joomla</a></li>
+                            <li><a title="jquery" href="/jquery/index.htm" target="_top">Learn jQuery</a></li>
+                            <li><a title="jqueryUI" href="/jqueryui/index.htm" target="_top">Learn jQueryUI</a></li>
+                            <li><a title="Learn JSF" href="/jsf/index.htm" target="_top">Learn JSF</a></li>
+                            <li><a title="Learn KnockoutJS" href="/knockoutjs/index.htm" target="_top">Learn KnockoutJS</a></li>
+                            <li><a title="Learn LESS" href="/less/index.htm" target="_top">Learn LESS</a></li>
+                            <li><a title="Learn Magento Framework" href="/magento/index.htm" target="_top">Learn Magento Framework</a></li>
+                            <li><a title="Learn Material Design Lite" href="/materialdesignlite/index.htm" target="_top">Material Design Lite</a></li>
+                            <li><a title="Learn Materialize" href="/materialize/index.htm" target="_top">Learn Materialize</a></li>
+                            <li><a title="Learn MVC Framework" href="/mvc_framework/index.htm" target="_top">Learn MVC Framework</a></li>
+                            <li><a title="Learn Prototype Framework" href="/prototype/index.htm" target="_top">Learn Prototype</a></li>
+                            <li><a title="Learn Pure.CSS" href="/purecss/index.htm" target="_top">Learn Pure.CSS</a></li>
+                            <li><a title="Learn ReactJS" href="/reactjs/index.htm" target="_top">Learn ReactJS</a></li>
+                            <li><a title="Learn Ruby on Rails-2.1" href="/ruby-on-rails-2.1/index.htm" target="_top">Learn Ruby on Rails-2.1</a></li>
+                            <li><a title="Learn Ruby on Rails" href="/ruby-on-rails/index.htm" target="_top">Learn Ruby on Rails</a></li>
+                            <li><a title="Sass Tutorial" href="/sass/index.htm" target="_top">Learn SASS</a></li>
+                            <li><a title="script.aculo.us" href="/script.aculo.us/index.htm" target="_top">Learn script.aculo.us</a></li>
+                            <li><a title="Learn SVG" href="/svg/index.htm" target="_top">Learn SVG</a></li>
+                            <li><a title="Learn TurboGears" href="/turbogears/index.htm" target="_top">Learn TurboGears</a></li>
+                            <li><a title="Learn VBScript" href="/vbscript/index.htm" target="_top">Learn VBScript</a></li>
+                            <li><a title="Web Developers Guide" href="/web_developers_guide/index.htm" target="_top">Web Developer's Guide</a></li>
+                            <li><a title="Learn Web Services" href="/webservices/index.htm" target="_top">Learn Web Services</a></li>
+                            <li><a title="RESTful Web Services" href="/restful/index.htm" target="_top">RESTful Web Services</a></li>
+                            <li><a title="Learn W3CSS" href="/w3css/index.htm" target="_top">Learn W3CSS</a></li>
+                            <li><a title="Learn Web Icons" href="/web_icons/index.htm" target="_top">Learn Web Icons</a></li>
+                            <li><a title="Learn Web Sockets" href="/websockets/index.htm" target="_top">Learn Web Sockets</a></li>
+                            <li><a title="Learn Web2Py" href="/web2py/index.htm" target="_top">Learn Web2Py</a></li>
+                            <li><a title="Learn WebGL" href="/webgl/index.htm" target="_top">Learn WebGL</a></li>
+                            <li><a title="Learn WebRTC" href="/webrtc/index.htm" target="_top">Learn WebRTC</a></li>
+                            <li><a title="Learn Wordpress" href="/wordpress/index.htm" target="_top">Learn Wordpress</a></li>
+                            <li><a title="Learn XHTML" href="/xhtml/index.htm" target="_top">Learn XHTML</a></li>
+                        </ul>
+                        <h4>Academic</h4>
+                        <ul id="academic_tutorials" class="menu">
+                            <li><a title="Learn Agile Methodology" href="/agile/index.htm" target="_top">Learn Agile Methodology</a></li>
+                            <li><a title="Learn Accounting Basics" href="/accounting_basics/index.htm" target="_top">Learn Accounting Basics</a></li>
+                            <li><a title="Learn Artificial Intelligence" href="/artificial_intelligence/index.htm" target="_top">Learn Artificial Intelligence</a></li>
+                            <li><a title="Learn Automata Theory" href="/automata_theory/index.htm" target="_top">Learn Automata Theory</a></li>
+                            <li><a title="Learn biometrics" href="/biometrics/index.htm" target="_top">Learn Biometrics</a></li>
+                            <li><a title="Learn Cloud Computing" href="/cloud_computing/index.htm" target="_top">Learn Cloud Computing</a></li>
+                            <li><a title="Learn Compiler Design" href="/compiler_design/index.htm" target="_top">Learn Compiler Design</a></li>
+                            <li><a title="Learn Computer Fundamentals" href="/computer_fundamentals/index.htm" target="_top">Learn Computer Fundamentals</a></li>
+                            <li><a title="Learn Computer Graphics" href="/computer_graphics/index.htm" target="_top">Learn Computer Graphics</a></li>
+                            <li><a title="Learn Computer Logical Organization" href="/computer_logical_organization/index.htm" target="_top">Computer Logical Organization</a></li>
+                            <li><a title="Computer Programming Fundamentals" href="/computer_programming/index.htm" target="_top">Computer Programming</a></li>
+                            <li><a title="Learn Cryptography" href="/cryptography/index.htm" target="_top">Learn Cryptography</a></li>
+                            <li><a title="Data Communication and Computer Network" href="/data_communication_computer_network/index.htm" target="_top">Computer Networking</a></li>
+                            <li><a title="Learn Data Mining" href="/data_mining/index.htm" target="_top">Learn Data Mining</a></li>
+                            <li><a title="Learn Data Structure &amp; Algorithms" href="/data_structures_algorithms/index.htm" target="_top">Data Structure &amp; Algorithms</a></li>
+                            <li><a title="Learn Data Warehouse" href="/dwh/index.htm" target="_top">Learn Data Warehouse</a></li>
+                            <li><a title="Learn DBMS" href="/dbms/index.htm" target="_top">Learn DBMS</a></li>
+                            <li><a title="Digital Image Processing" href="/dip/index.htm" target="_top">Digital Image Processing</a></li>
+                            <li><a title="Digital Signal Processing" href="/digital_signal_processing/index.htm" target="_top">Digital Signal Processing</a></li>
+                            <li><a title="Discrete Mathematics" href="/discrete_mathematics/index.htm" target="_top">Discrete Mathematics</a></li>
+                            <li><a title="Learn Embedded Systems" href="/embedded_systems/index.htm" target="_top">Learn Embedded Systems</a></li>
+                            <li><a title="Learn E-Commerce" href="/e_commerce/index.htm" target="_top">Learn E-Commerce</a></li>
+                            <li><a title="Learn Estimation Techniques" href="/estimation_techniques/index.htm" target="_top">Learn Estimation Techniques</a></li>
+                            <li><a title="Learn Graph Theory" href="/graph_theory/index.htm" target="_top">Learn Graph Theory</a></li>
+                            <li><a title="Learn HTTP" href="/http/index.htm" target="_top">Learn HTTP</a></li>
+                            <li><a title="Learn Human Computer Interface" href="/human_computer_interface/index.htm" target="_top">Learn Human Computer Interface</a></li>
+                            <li><a title="Information Security and Cyber Law" href="/information_security_cyber_law/index.htm" target="_top">Information Security and Cyber Law</a></li>
+                            <li><a title="Internet Technologies" href="/internet_technologies/index.htm" target="_top">Internet Technologies</a></li>
+                            <li><a title="Learn IPv4" href="/ipv4/index.htm" target="_top">Learn IPv4</a></li>
+                            <li><a title="Learn IPv6" href="/ipv6/index.htm" target="_top">Learn IPv6</a></li>
+                            <li><a title="Digital Image Processing using Java" href="/java_dip/index.htm" target="_top">Image Processing with Java</a></li>
+                            <li><a title="Learn Management Information System" href="/management_information_system/index.htm" target="_top">Mgmt Information System</a></li>
+                            <li><a title="Learn Mobile Computing" href="/mobile_computing/index.htm" target="_top">Learn Mobile Computing</a></li>
+                            <li><a title="Learn Object Oriented Analysis and Design" href="/object_oriented_analysis_design/index.htm" target="_top">Learn OOAD</a></li>
+                            <li><a title="Learn Operating System" href="/operating_system/index.htm" target="_top">Learn Operating System</a></li>
+                            <li><a title="Learn Network Security" href="/network_security/index.htm" target="_top">Learn Network Security</a></li>
+                            <li><a title="Learn Parallel Algorithm" href="/parallel_algorithm/index.htm" target="_top">Learn Parallel Algorithm</a></li>
+                            <li><a title="Learn Power Electronics" href="/power_electronics/index.htm" target="_top">Learn Power Electronics</a></li>
+                            <li><a title="Learn SDLC (Software Development Life Cycle)" href="/sdlc/index.htm" target="_top">S/W Development Life Cycle</a></li>
+                            <li><a title="Learn Search Engine Optimization" href="/seo/index.htm" target="_top">Learn SEO Techniques</a></li>
+                            <li><a title="Learn Statistics" href="/statistics/index.htm" target="_top">Learn Statistics</a></li>
+                            <li><a title="Signals and Systems" href="/signals_and_systems/index.htm" target="_top">Signals and Systems</a></li>
+                            <li><a title="Learn Software Architecture Design" href="/software_architecture_design/index.htm" target="_top">Software Architecture Design</a></li>
+                            <li><a title="Software Engineering" href="/software_engineering/index.htm" target="_top">Software Engineering</a></li>
+                            <li><a title="Learn VLSI Design" href="/vlsi_design/index.htm" target="_top">Learn VLSI Design</a></li>
+                        </ul>
+                        <h4>Software Quality</h4>
+                        <ul id="software_quality" class="menu">
+                            <li><a title="Learn Concordion" href="/concordion/index.htm" target="_top">Learn Concordion</a></li>
+                            <li><a title="Learn Jenkins" href="/jenkins/index.htm" target="_top">Learn Jenkins</a></li>
+                            <li><a title="Learn Database Testing" href="/database_testing/index.htm" target="_top">Learn Database Testing</a></li>
+                            <li><a title="Learn SEI CMMI" href="/cmmi/index.htm" target="_top">Learn SEI CMMI</a></li>
+                            <li><a title="Learn ETL Testing" href="/etl_testing/index.htm" target="_top">Learn ETL Testing</a></li>
+                            <li><a title="Learn Penetration Testing" href="/penetration_testing/index.htm" target="_top">Learn Penetration Testing</a></li>
+                            <li><a title="Learn QC" href="/qc/index.htm" target="_top">Learn QC</a></li>
+                            <li><a title="Learn QTP" href="/qtp/index.htm" target="_top">Learn QTP</a></li>
+                            <li><a title="Learn RSpec" href="/rspec/index.htm" target="_top">Learn RSpec</a></li>
+                            <li><a title="Learn SAP Testing" href="/sap_testing/index.htm" target="_top">Learn SAP Testing</a></li>
+                            <li><a title="Learn Security Testing" href="/security_testing/index.htm" target="_top">Learn Security Testing</a></li>
+                            <li><a title="Learn Selenium" href="/selenium/index.htm" target="_top">Learn Selenium</a></li>
+                            <li><a title="Learn Six Sigma" href="/six_sigma/index.htm" target="_top">Learn Six Sigma</a></li>
+                            <li><a title="Software Testing Dictionary" href="/software_testing_dictionary/index.htm" target="_top">Software Testing Dictionary</a></li>
+                            <li><a title="Learn Software Testing" href="/software_testing/index.htm" target="_top">Learn Software Testing</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="featured-box" style="height: 3772px;">
+                        <h4>Scripts</h4>
+                        <ul id="scripts" class="menu">
+                            <li><a title="Learn JavaScript" href="/javascript/index.htm" target="_top">Learn JavaScript</a></li>
+                            <li><a title="jquery" href="/jquery/index.htm" target="_top">Learn jQuery</a></li>
+                            <li><a title="jqueryUI" href="/jqueryui/index.htm" target="_top">Learn jQueryUI</a></li>
+                            <li><a title="Learn Lua" href="/lua/index.htm" target="_top">Learn Lua</a></li>
+                            <li><a title="Learn Perl" href="/perl/index.htm" target="_top">Learn Perl</a></li>
+                            <li><a title="Learn PHP" href="/php/index.htm" target="_top">Learn PHP</a></li>
+                            <li><a title="Learn PHP-7" href="/php7/index.htm" target="_top">Learn PHP-7</a></li>
+                            <li><a title="Learn Python" href="/python/index.htm" target="_top">Learn Python</a></li>
+                            <li><a title="Learn Python-3" href="/python3/index.htm" target="_top">Learn Python-3</a></li>
+                            <li><a title="Learn PyQt" href="/pyqt/index.htm" target="_top">Learn PyQt</a></li>
+                            <li><a title="Learn WxPython" href="/wxpython/index.htm" target="_top">Learn WxPython</a></li>
+                            <li><a title="Learn Ruby" href="/ruby/index.htm" target="_top">Learn Ruby</a></li>
+                            <li><a title="Learn RSpec" href="/rspec/index.htm" target="_top">Learn RSpec</a></li>
+                            <li><a title="Learn Sed" href="/sed/index.htm" target="_top">Learn Sed</a></li>
+                            <li><a title="Learn Tcl/Tk" href="/tcl-tk/index.htm" target="_top">Learn Tcl/Tk</a></li>
+                            <li><a title="Learn VBScript" href="/vbscript/index.htm" target="_top">Learn VBScript</a></li>
+                        </ul>
+                        <h4>Management</h4>
+                        <ul id="management" class="menu">
+                            <li><a title="Learn Advertisement and Marketing Communications" href="/advertisement_and_marketing_communications/index.htm" target="_top">Adv. and Mkt Communications</a></li>
+                            <li><a title="Learn Brand Management" href="/brand_management/index.htm" target="_top">Learn Brand Management</a></li>
+                            <li><a title="Learn Collaborative Management" href="/collaborative_management/index.htm" target="_top">Learn Collaborative Management</a></li>
+                            <li><a title="Learn Business Ethics" href="/consumer_behavior/index.htm" target="_top">Learn Consumer Behavior</a></li>
+                            <li><a title="Customer Relationship Management" href="/customer_relationship_management/index.htm" target="_top">Customer Relationship Management</a></li>
+                            <li><a title="Learn Entrepreneurship Development" href="/entrepreneurship_development/index.htm" target="_top">Entrepreneurship Development</a></li>
+                            <li><a title="Learn EVM" href="/earn_value_management/index.htm" target="_top">Learn EVM</a></li>
+                            <li><a title="Food Production Operations" href="/food_production_operations/index.htm" target="_top">Food Production Operations</a></li>
+                            <li><a title="Learn Individual and Group Behavior" href="/individual_and_group_behavior/index.htm" target="_top">Individual and Group Behavior</a></li>
+                            <li><a title="Learn International Finance Management" href="/international_finance/index.htm" target="_top">International Finance</a></li>
+                            <li><a title="Learn International Marketing" href="/international_marketing/index.htm" target="_top">International Marketing</a></li>
+                            <li><a title="Learn International Business Management" href="/international_business_management/index.htm" target="_top">International Business Management</a></li>
+                            <li><a title="Learn Knowledge Management" href="/knowledge_management/index.htm" target="_top">Learn Knowledge Management</a></li>
+                            <li><a title="Learn Managerial Economics" href="/managerial_economics/index.htm" target="_top">Learn Managerial Economics</a></li>
+                            <li><a title="Project Management Concepts" href="/management_concepts/index.htm" target="_top">Management Concepts</a></li>
+                            <li><a title="Professional Ethics" href="/professional_ethics/index.htm" target="_top">Professional Ethics</a></li>
+                            <li><a title="Personal Branding" href="/personal_branding/index.htm" target="_top">Personal Branding</a></li>
+                            <li><a title="Organizational Behavior" href="/organizational_behavior/index.htm" target="_top">Organizational Behavior</a></li>
+                            <li><a title="PMP Examination" href="/pmp-exams/index.htm" target="_top">PMP Examination</a></li>
+                            <li><a title="Retail Management" href="/retail_management/index.htm" target="_top">Retail Management</a></li>
+                            <li><a title="Learn Scrum" href="/scrum/index.htm" target="_top">Learn Scrum</a></li>
+                            <li><a title="Strategic Management" href="/strategic_management/index.htm" target="_top">Strategic Management</a></li>
+                            <li><a title="Learn Tourism Management" href="/tourism_management/index.htm" target="_top">Learn Tourism Management</a></li>
+                        </ul>
+                        <h4>SAP</h4>
+                        <ul id="sap_tutorials" class="menu">
+                            <li><a title="Learn SAP ABAP" href="/sap_abap/index.htm" target="_top">Learn SAP ABAP</a></li>
+                            <li><a title="Learn Crystal Reports" href="/crystal_reports/index.htm" target="_top">Learn Crystal Reports</a></li>
+                            <li><a title="Learn SAP FICO" href="/sap_fico/index.htm" target="_top">Learn SAP FICO</a></li>
+                            <li><a title="Learn SAP Fiori" href="/sap_fiori/index.htm" target="_top">Learn SAP Fiori</a></li>
+                            <li><a title="Learn SAP R/3" href="/sap/index.htm" target="_top">Learn SAP R/3</a></li>
+                            <li><a title="Learn SAP Lumira" href="/sap_lumira/index.htm" target="_top">Learn SAP Lumira</a></li>
+                            <li><a title="Learn SAP MM" href="/sap_mm/index.htm" target="_top">Learn SAP MM</a></li>
+                            <li><a title="Learn SAP SD" href="/sap_sd/index.htm" target="_top">Learn SAP SD</a></li>
+                            <li><a title="Learn SAP HANA" href="/sap_hana/index.htm" target="_top">Learn SAP HANA</a></li>
+                            <li><a title="Learn SAP Testing" href="/sap_testing/index.htm" target="_top">Learn SAP Testing</a></li>
+                        </ul>
+                        <h4>Soft Skills</h4>
+                        <ul id="soft_skill" class="menu">
+                            <li><a title="Learn Assertiveness" href="/assertiveness/index.htm" target="_top">Learn Assertiveness</a></li>
+                            <li><a title="Learn Anger Management" href="/anger_management/index.htm" target="_top">Learn Anger Management</a></li>
+                            <li><a title="Learn Business Writing Skills" href="/business_writing_skills/index.htm" target="_top">Learn Business Writing Skills</a></li>
+                            <li><a title="Learn Business Acumen" href="/business_acumen/index.htm" target="_top">Learn Business Acumen</a></li>
+                            <li><a title="Learn Business Dress Code" href="/business_dress_code/index.htm" target="_top">Learn Business Dress Code</a></li>
+                            <li><a title="Learn Business Etiquette" href="/business_etiquette/index.htm" target="_top">Learn Business Etiquette</a></li>
+                            <li><a title="Learn Business Ethics" href="/business_ethics/index.htm" target="_top">Learn Business Ethics</a></li>
+                            <li><a title="Learn Body Language" href="/body_language/index.htm" target="_top">Learn Body Language</a></li>
+                            <li><a title="Learn Critical Thinking" href="/critical_thinking/index.htm" target="_top">Learn Critical Thinking</a></li>
+                            <li><a title="Learn Cracking Interviews" href="/cracking_interviews/index.htm" target="_top">Learn Cracking Interviews</a></li>
+                            <li><a title="Learn Interpersonal Skills" href="/interpersonal_skills/index.htm" target="_top">Learn Interpersonal Skills</a></li>
+                            <li><a title="Learn Job Search Skills" href="/job_search_skills/index.htm" target="_top">Learn Job Search Skills</a></li>
+                            <li><a title="Learn Self Confidence" href="/self_confidence/index.htm" target="_top">Learn Self Confidence</a></li>
+                            <li><a title="Learn Self Esteem" href="/self_esteem/index.htm" target="_top">Learn Self Esteem</a></li>
+                            <li><a title="Spoken English Errors" href="/spoken_english_errors/index.htm" target="_top">Spoken English Errors</a></li>
+                            <li><a title="Social Intelligence" href="/social_intelligence/index.htm" target="_top">Social Intelligence</a></li>
+                            <li><a title="Learn Social Learning" href="/social_learning/index.htm" target="_top">Learn Social Learning</a></li>
+                            <li><a title="Learn Work Life Balance" href="/work_life_balance/index.htm" target="_top">Learn Work Life Balance</a></li>
+                            <li><a title="Learn Workplace Diversity" href="/workplace_diversity/index.htm" target="_top">Learn Workplace Diversity</a></li>
+                            <li><a title="Learn Workplace Politics" href="/workplace_politics/index.htm" target="_top">Learn Workplace Politics</a></li>
+                            <li><a title="Learn Work Civility" href="/workplace_civility/index.htm" target="_top">Learn Work Civility</a></li>
+                        </ul>
+                        <h4>Selected Reading</h4>
+                        <ul id="selected_reading" class="menu">
+                            <li><a href="computer_glossary.htm" target="_top">Computer Glossary</a></li>
+                            <li><a href="/developers_best_practices/index.htm" target="_top">Developer's Best Practices</a></li>
+                            <li><a href="free_web_graphics.htm" target="_top">Download Free Graphics</a></li>
+                            <li><a href="/effective_resume_writing.htm" target="_top">Effective Resume Writing</a></li>
+                            <li><a href="computer_whoiswho.htm" target="_top">Who is Who</a></li>
+                        </ul>
+                        <h4>Misc</h4>
+                        <ul id="misc" class="menu">
+                            <li><a title="Learn Drools" href="/drools/index.htm" target="_top">Learn Drools</a></li>
+                            <li><a title="Learn DLL" href="/dll/index.htm" target="_top">Learn DLL</a></li>
+                            <li><a title="Learn Git" href="/git/index.htm" target="_top">Learn Git</a></li>
+                            <li><a title="Learn GDB Debugger" href="/gnu_debugger/index.htm" target="_top">Learn GDB Debugger</a></li>
+                            <li><a title="Learn ITIL" href="/itil/index.htm" target="_top">Learn ITIL</a></li>
+                            <li><a title="Learn Makefile" href="/makefile/index.htm" target="_top">Learn Makefile</a></li>
+                            <li><a title="Learn Parrot" href="/parrot/index.htm" target="_top">Learn Parrot</a></li>
+                            <li><a title="Learn KDB+" href="/kdbplus/index.htm" target="_top">Learn KDB+</a></li>
+                            <li><a title="Learn CGI with PERL" href="/perl/perl_cgi.htm" target="_top">Learn CGI with PERL</a></li>
+                            <li><a title="Learn RADIUS" href="/radius/index.htm" target="_top">Learn RADIUS</a></li>
+                            <li><a title="Learn RSS" href="/rss/index.htm" target="_top">Learn RSS</a></li>
+                            <li><a title="Learn SOAP" href="/soap/index.htm" target="_top">Learn SOAP</a></li>
+                            <li><a title="Learn SVN" href="/svn/index.htm" target="_top">Learn SVN</a></li>
+                            <li><a title="Learn UDDI" href="/uddi/index.htm" target="_top">Learn UDDI</a></li>
+                            <li><a title="Learn UML" href="/uml/index.htm" target="_top">Learn UML</a></li>
+                            <li><a title="Learn Unix Sockets" href="/unix_sockets/index.htm" target="_top">Learn Unix Sockets</a></li>
+                            <li><a title="Learn UNIX" href="/unix/index.htm" target="_top">Learn UNIX</a></li>
+                        </ul>
+                        <h4>XML Technologies</h4>
+                        <ul id="xml_technologies" class="menu">
+                            <li><a title="Learn AIML" href="/aiml/index.htm" target="_top">Learn AIML</a></li>
+                            <li><a title="Learn DOM" href="/dom/index.htm" target="_top">Learn DOM</a></li>
+                            <li><a title="Learn DTD" href="/dtd/index.htm" target="_top">Learn DTD</a></li>
+                            <li><a title="Learn ebXML" href="/ebxml/index.htm" target="_top">Learn ebXML</a></li>
+                            <li><a title="Learn Java XML" href="/java_xml/index.htm" target="_top">Learn Java XML</a></li>
+                            <li><a title="Learn WSDL" href="/wsdl/index.htm" target="_top">Learn WSDL</a></li>
+                            <li><a title="Learn XML-RPC" href="/xml-rpc/index.htm" target="_top">Learn XML-RPC</a></li>
+                            <li><a title="Learn XML" href="/xml/index.htm" target="_top">Learn XML</a></li>
+                            <li><a title="Learn XPath" href="/xpath/index.htm" target="_top">Learn XPath</a></li>
+                            <li><a title="Learn XQuery" href="/xquery/index.htm" target="_top">Learn XQuery</a></li>
+                            <li><a title="Learn XSD" href="/xsd/index.htm" target="_top">Learn XSD</a></li>
+                            <li><a title="Learn XSLT" href="/xslt/index.htm" target="_top">Learn XSLT</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('div.srch_qote').mouseover(function () {
+                $("div#srch").show();
+            });
+            $('div.srch_qote').mouseout(function () {
+                $("div#srch").hide();
+            });
+
+
+            $("#tab1").click(function () {
+                $("#searchby").val('Book');
+                $("#srchR").html('Book');
+                $("div#srch").hide();
+            })
+            $("#tab2").click(function () {
+                $("#searchby").val('Author');
+                $("#srchR").html('Author');
+                $("div#srch").hide();
+            })
+            $("#tab3").click(function () {
+                $("#searchby").val('Subject');
+                $("#srchR").html('Subject');
+                $("div#srch").hide();
+            })
+        });
+
+    </script>
+
+
+     
+
+     
+    <!-- ./box product SPECIAL PRODUCTS -->
+    <!-- Footer -->
+
+    <footer id="footer2">
+
+        @*<script>
+                $(function() {
+                    $("#subscribe").click(function() {
+
+                        var emailId = $("#email_id").val();
+
+                        if (emailId.length == 0) {
+                            $("#eml_err").html('<span style="color:#ff571e;">Please enter your email address!</span>');
+                            return false;
+                        }
+
+                        if (emailId.length != 0) {
+                            if (!ValidateEmail(emailId)) {
+                                $("#eml_err2").html('<span style="color:#ff571e;">Invalid email address.</span>');
+                                return false;
+                            }
+                            else {
+                                $("#eml_err2").fadeOut("slow");
+
+                                $.ajax({
+                                    type: "POST",
+                                    url: "ajax/subscribe_email_save.php",
+                                    data: "email_id=" + emailId,
+                                    success: function(sresult) {
+                                        $("#subresult").html(sresult);
+                                        $("#email_id").val('');
+                                    }
+                                });
+
+                                return false;
+                            }
+                        }
+
+
+                    });
+
+                    $("#email_id").keypress(function() {
+                        $("#eml_err").fadeOut("slow");
+                    });
+
+
+                });
+
+                function ValidateEmail(email) {
+                    var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+                    return expr.test(email);
+                }
+                ;
+
+            </script>*@
+        <!-- footer paralax-->
+        <div class="footer-paralax">
+            @*<div class="footer-row footer-center">
+                    <div class="container">
+                        <h3>Subscribe to BuyBooksIndia Newsletter</h3>
+                        <form name="" id="subscribe-form" class="form-inline form-subscribe" action="" method="POST">
+                            <div class="form-group">
+                                <input class="form-control" id="email_id" name="email_id" placeholder="Enter Your E-mail Address" type="text">
+                                <button type="submit" id="subscribe" class="btn btn-default"><i class="fa fa-paper-plane-o"></i></button>
+                            </div>
+                        </form>
+
+                        <div id="eml_err"></div>
+                        <div id="eml_err2"></div>
+                        <div id="subresult"></div>
+                    </div>
+                </div>*@
+
+            <!-- ./footer paralax-->
+            <!--footer starts here-->
+
+            <div class="footer-row">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-3 col-md-3">
+                            <div class="widget-container">
+                                <h3 class="widget-title">Information</h3>
+                                <div class="widget-body">
+                                    <ul>
+                                        <li><a class="location" href="#">11 Darya Ganj, New Delhi - 110002</a></li>
+                                        <li><a class="phone" href="tel:+911145355555">+91-11-45355555</a></li>
+                                        <li><a class="email" href="mailto:info@buybooksindia.com">info@buybooksindia.com</a></li>
+                                        <!-- <li><a class="mobile" href="#">Hotline: 090 999 8686</a></li>-->
+                                    </ul>
+                                </div>
+                                <div class="footer-social">
+                                    <ul>
+                                        <li><a class="facebook" href="http://www.facebook.com/buybooksindia" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a class="twitter" href="https://twitter.com/buybooksindia" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a class="google-plus" href="https://plus.google.com/u/0/b/107709029633302949987/107709029633302949987/posts" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a class="wordpress" href="http://blog.buybooksindia.com/" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3  col-md-2">
+                            <div class="widget-container">
+                                <h3 class="widget-title">COMPANY</h3>
+                                <div class="widget-body">
+                                    <ul>
+                                        <li><a href="http://www.buybooksindia.com/about-us.php">About Us</a></li>
+                                        <li><a href="http://www.buybooksindia.com/privacy-policy.php">Privacy Policy</a></li>
+                                        <li><a href="http://www.buybooksindia.com/terms-and-conditions.php">Terms of Use</a></li>
+                                        <li><a href="http://www.buybooksindia.com/disclaimer.php">Disclaimer</a></li>
+                                        <li><a href="http://www.buybooksindia.com/contact-us.php">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-md-2">
+                            <div class="widget-container">
+                                <h3 class="widget-title">my account</h3>
+                                <div class="widget-body">
+                                    <ul>
+                                        <li><a href="http://www.buybooksindia.com/control/show-cart.php">My Cart</a></li>
+                                        <li><a href="http://www.buybooksindia.com/control/myorders.php">My Orders</a></li>
+                                        <li><a href="http://www.buybooksindia.com/control/myaddress.php">My Addresses</a></li>
+                                        <li><a href="http://www.buybooksindia.com/control/myaccount.php">My Personal Info</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-md-2">
+                            <div class="widget-container">
+                                <h3 class="widget-title">SUPPORT</h3>
+                                <div class="widget-body">
+                                    <ul>
+                                        <li><a href="http://www.buybooksindia.com/how-to-order.php">How to Order</a></li>
+                                        <li><a href="http://www.buybooksindia.com/payments.php">Payment</a></li>
+                                        <li><a href="http://www.buybooksindia.com/shipping-and-delivery.php">Shipping</a></li>
+                                        <li><a href="http://www.buybooksindia.com/returns-and-exchange.php">Return</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-3 j-widget">
+                            <div style="float:left; background:#fff; padding:3px 3px 2px 3px; border-radius:10px; box-shadow: 02px 3px 3px #aaa;margin-top:10px;">
+                                <div id="jungleeRatingWidget"> <iframe src="~/images/iframe.htm" marginwidth="0" marginheight="0" title="junglee.com" scrolling="no" id="jungleeIframe" style="text-align: center; background: rgb(255, 255, 255) none repeat scroll 0% 0%; max-height: 150px;" frameborder="0" height="113" width="127"></iframe></div>
+                                <script type="text/javascript">
+
+                                    (function () {
+
+                                        var jc = document.createElement('script'); jc.type = 'text/javascript'; jc.async = 'true'; jc.src = 'https://junglee.com/esr/js?noDomainCheck=1&sId=A3GL3GAIHUTOIK';
+
+                                        var s = document.getElementsByTagName('script')[0];
+
+                                        s.parentNode.insertBefore(jc, s);
+
+                                    })();
+
+                                </script>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom-wapper">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="footer-coppyright">
+                                    COPYRIGHT © 2010-2015 <a href="http://www.buybooksindia.com/" style="color:#fff;">BUYBOOKSINDIA.COM</a> ONLINE BOOK STORE, INDIA. ALL RIGHTS RESERVED
+                                </div>
+
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="footer-payment-logo">
+                                    <img src="~/images/payment-logo.jpg" alt="payment logo" class="img-responsive">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="scroll_top" title="Scroll to Top" style="display: inline;">Scroll</a>
+        <!-- Script-->
+        <script type="text/javascript" src="~/Scripts/bootstrap.js"></script>
+        <script type="text/javascript" src="~/Scripts/select2.js"></script>
+        <script type="text/javascript" src="~/Scripts/jquery_002.js"></script>
+        <script type="text/javascript" src="~/Scripts/owl.js"></script>
+        <script type="text/javascript" src="~/Scripts/jquery.js"></script>
+        <script type="text/javascript" src="~/Scripts/theme-script.js"></script>
+        <script type="text/javascript" src="~/Scripts/jquery-ui.js"></script>
+        <script type="text/javascript" src="~/Scripts/jquery-ui-1.js"></script>
+
+        <!--- *******************************Add to Cart ******************************* -->
+
+        <script language="javascript">
+            $(function () {
+                $.ajax({
+                    type: "POST",
+                    url: "/cart.php",
+                    data: "",
+                    success: function (result_data) {
+                        $("#bbi_cart").html(result_data);
+                        return false;
+                    }
+                });
+
+                /*$(".add-to-carta").click(function(e) {
+
+                 var product_id = $(this).attr("product-id");
+
+                 $.ajax({
+                 type:"GET",
+                 url:"cart.php",
+                 data:"pid="+product_id,
+                 success: function(result_data) {
+
+                 $("#cart-block").load("cart.php");
+
+
+                 }
+                 });
+
+                 return false;
+                 });*/
+
+
+                /*$("#cart-block").mousemove(function() {
+                    $.ajax({
+                        type: "POST",
+                        url: "cart.php",
+                        data: "",
+                        success: function(result_data) {
+                            $("#bbi_cart").html(result_data);
+                            return false;
+                        }
+                    });
+
+                });*/
+            });
+        </script>
+        <script type="text/javascript" src="~/Scripts/global.js"></script>
+
+    </footer>
+
+    <!-- Google Code for Remarketing Tag -->
+    <!--------------------------------------------------
+    Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+    --------------------------------------------------->
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 959264397;
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="~/Scripts/conversion.js">
+    </script><iframe name="google_conversion_frame" title="Google conversion frame" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/959264397/?random=1457701867019&amp;cv=8&amp;fst=1457701867019&amp;num=1&amp;fmt=1&amp;guid=ON&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_his=2&amp;u_tz=330&amp;u_java=true&amp;u_nplug=10&amp;u_nmime=97&amp;frm=0&amp;url=http%3A//www.buybooksindia.com/&amp;tiba=Indian%20Bookstore%20Online%2C%20Buy%20Books%20Online%20India%2C%20Online%20Books%20Shopping" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" frameborder="0" height="13" width="300">
+        &lt;img
+        height="1" width="1" border="0" alt=""
+        src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/959264397/?frame=0&amp;random=1457701867019&amp;cv=8&amp;fst=1457701867019&amp;num=1&amp;fmt=1&amp;guid=ON&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_his=2&amp;u_tz=330&amp;u_java=true&amp;u_nplug=10&amp;u_nmime=97&amp;frm=0&amp;url=http%3A//www.buybooksindia.com/&amp;tiba=Indian%20Bookstore%20Online%2C%20Buy%20Books%20Online%20India%2C%20Online%20Books%20Shopping"
+        /&gt;
+    </iframe>
+    <noscript>
+        <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/959264397/?value=0&amp;guid=ON&amp;script=0" />
+        </div>
+    </noscript>
+
+
+    <ul style="z-index: 1; top: 0px; left: 0px; display: none;" aria-activedescendant="ui-active-menuitem" role="listbox" class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all"></ul>
+</body>
+</html>

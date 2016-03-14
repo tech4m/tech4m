@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:38729/Tech4mService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/tech4mEntity" />
+  <xs:element name="SaveUpdateVideo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="insertUpdateType" type="xs:int" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="video" nillable="true" type="q1:Video" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUpdateVideoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveUpdateVideoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteVideo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VideoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteVideoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteVideoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVideoList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="videoId" type="xs:int" />
+        <xs:element minOccurs="0" name="videoSubCategoryId" type="xs:int" />
+        <xs:element minOccurs="0" name="videoCategoryId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVideoListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="GetVideoListResult" nillable="true" type="q2:ArrayOfVideo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVideo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="videoId" type="xs:int" />
+        <xs:element minOccurs="0" name="videoSubCategoryId" type="xs:int" />
+        <xs:element minOccurs="0" name="videoCategoryId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVideoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="GetVideoResult" nillable="true" type="q3:ArrayOfVideoViewModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUpdateBook">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="insertUpdateType" type="xs:int" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="book" nillable="true" type="q4:Book" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUpdateBookResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveUpdateBookResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteBook">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteBookResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteBookResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBookList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bookId" type="xs:int" />
+        <xs:element minOccurs="0" name="bookSubCategoryId" type="xs:int" />
+        <xs:element minOccurs="0" name="bookCategoryId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBookListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="GetBookListResult" nillable="true" type="q5:ArrayOfBook" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchBookByISBN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="isbn" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchBookByISBNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="SearchBookByISBNResult" nillable="true" type="q6:ArrayOfBookSearchViewModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="category" nillable="true" type="q7:Category" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddCategoryResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUpdateCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="insertUpdateType" type="xs:int" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="category" nillable="true" type="q8:Category" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUpdateCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveUpdateCategoryResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SubCategoryId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteCategoryResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CategoryId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="GetCategoryListResult" nillable="true" type="q9:ArrayOfCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalCategories">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalCategoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TotalCategoriesResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Category">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="categorySlug" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="CategoryResult" nillable="true" type="q10:Category" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="category" nillable="true" type="q11:Category" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditCategoryResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Categories">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CategoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="CategoriesResult" nillable="true" type="q12:ArrayOfCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSubCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="subCategory" nillable="true" type="q13:SubCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSubCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddSubCategoryResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUpdateSubCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="insertUpdateType" type="xs:int" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="subCategory" nillable="true" type="q14:SubCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUpdateSubCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveUpdateSubCategoryResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSubCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SubCategoryId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSubCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteSubCategoryResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubCategoryListByCategoryId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="categoryId" type="xs:int" />
+        <xs:element minOccurs="0" name="subCategoryId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubCategoryListByCategoryIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="GetSubCategoryListByCategoryIdResult" nillable="true" type="q15:ArrayOfSubCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalSubCategories">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalSubCategoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TotalSubCategoriesResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditSubCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="subCategory" nillable="true" type="q16:SubCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditSubCategoryResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubCategories">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubCategoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="SubCategoriesResult" nillable="true" type="q17:ArrayOfSubCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUpdateInterviewQuestion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="insertUpdateType" type="xs:int" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="interviewQuestion" nillable="true" type="q18:InterviewQuestion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUpdateInterviewQuestionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveUpdateInterviewQuestionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteInterviewQuestion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InterviewQuestionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteInterviewQuestionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteInterviewQuestionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInterviewQuestionList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InterviewQuestionId" type="xs:int" />
+        <xs:element minOccurs="0" name="interviewQuestionSubCategoryId" type="xs:int" />
+        <xs:element minOccurs="0" name="interviewQuestionCategoryId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInterviewQuestionListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="GetInterviewQuestionListResult" nillable="true" type="q19:ArrayOfInterviewQuestion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInterviewQuestionById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="interviewQuestionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInterviewQuestionByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="GetInterviewQuestionByIdResult" nillable="true" type="q20:InterviewQuestion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInterviewQuestionListByCategory">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInterviewQuestionListByCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="GetInterviewQuestionListByCategoryResult" nillable="true" type="q21:ArrayOfInterviewQuestion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInterviewQuestionListByBySubCategory">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInterviewQuestionListByBySubCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="GetInterviewQuestionListByBySubCategoryResult" nillable="true" type="q22:ArrayOfInterviewQuestion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddInterviewQuestionToPlayList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="playList" type="xs:int" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="interviewQuestion" nillable="true" type="q23:InterviewQuestion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddInterviewQuestionToPlayListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddInterviewQuestionToPlayListResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUpdateInterviewQuestionAnswer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="insertUpdateType" type="xs:int" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="interviewQuestionAnswer" nillable="true" type="q24:InterviewQuestionAnswer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUpdateInterviewQuestionAnswerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveUpdateInterviewQuestionAnswerResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInterviewQuestionAnswer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="interviewQuestionId" type="xs:int" />
+        <xs:element minOccurs="0" name="interviewQuestionSubCategoryId" type="xs:int" />
+        <xs:element minOccurs="0" name="interviewQuestionCategoryId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInterviewQuestionAnswerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="GetInterviewQuestionAnswerResult" nillable="true" type="q25:InterviewQuestionAnswerViewModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUpdateArticle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="insertUpdateType" type="xs:int" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="article" nillable="true" type="q26:Article" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveUpdateArticleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveUpdateArticleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteArticle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="articleId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteArticleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteArticleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArticleList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="articleId" type="xs:int" />
+        <xs:element minOccurs="0" name="articSubCategoryId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArticleListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="GetArticleListResult" nillable="true" type="q27:ArrayOfArticle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostWithPaging">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostWithPagingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="PostWithPagingResult" nillable="true" type="q28:ArrayOfPost" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostsForTag">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tagSlug" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostsForTagResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="PostsForTagResult" nillable="true" type="q29:ArrayOfPost" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostsForCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="categorySlug" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostsForCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="PostsForCategoryResult" nillable="true" type="q30:ArrayOfPost" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostsForSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="search" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostsForSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="PostsForSearchResult" nillable="true" type="q31:ArrayOfPost" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalPosts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="checkIsPublished" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalPostsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TotalPostsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalPostsForCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="categorySlug" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalPostsForCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TotalPostsForCategoryResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalPostsForTag">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tagSlug" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalPostsForTagResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TotalPostsForTagResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalPostsForSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="search" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalPostsForSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TotalPostsForSearchResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostListWithSort">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pageNo" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="sortColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sortByAscending" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostListWithSortResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="PostListWithSortResult" nillable="true" type="q32:ArrayOfPost" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostByMonthYear">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="year" type="xs:int" />
+        <xs:element minOccurs="0" name="month" type="xs:int" />
+        <xs:element minOccurs="0" name="titleSlug" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostByMonthYearResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="PostByMonthYearResult" nillable="true" type="q33:Post" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostByUniqueId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostByUniqueIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="PostByUniqueIdResult" nillable="true" type="q34:Post" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="post" nillable="true" type="q35:Post" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPostResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddPostResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditPost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="post" nillable="true" type="q36:Post" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditPostResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePost">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePostResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tags">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TagsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="TagsResult" nillable="true" type="q37:ArrayOfTag" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalTags">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalTagsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TotalTagsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tag">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tagSlug" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TagResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="TagResult" nillable="true" type="q38:Tag" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TagByUniqueId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TagByUniqueIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="TagByUniqueIdResult" nillable="true" type="q39:Tag" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddTag">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="tag" nillable="true" type="q40:Tag" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddTagResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddTagResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditTag">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/tech4mEntity" minOccurs="0" name="tag" nillable="true" type="q41:Tag" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditTagResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTag">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTagResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
