@@ -27,3 +27,13 @@ Here are some ideas to get you started:
 <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> 
 <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*O4EpCHRBgn-sevVV-iHnjw.jpeg" alt="git" width="40" height="40"/> </a> 
 </p>
+<h3 align="left">Azure Certifications:</h3>
+<p align="left">
+<img src="https://images.credly.com/size/680x680/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png" width="100" height="100" alt="az-900"> 
+<img src="https://images.credly.com/size/340x340/images/4136ced8-75d5-4afb-8677-40b6236e2672/azure-ai-fundamentals-600x600.png" width="100" height="100" alt="az-900"> 
+</p>
+<h3 align="left">AWS Certifications:</h3>
+<p align="left">
+<img src="https://images.credly.com/size/680x680/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png" width="100" height="100" alt="az-900">
+<img src="https://images.credly.com/size/680x680/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png" width="100" height="100" alt="az-900">
+</p>
