@@ -14,4 +14,9 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-11
+- 🔭 I’m currently working on  **AWS, API's , .Net Core, Microservices**
+
+<h3 align="left">Connect with me:</h3>
+<p align="left"> 
+<a href="https://www.linkedin.com/in/amit-kumar-19950218" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="dbuntyz" height="30" width="40" /></a> 
+</p>
