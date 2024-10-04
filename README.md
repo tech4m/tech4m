@@ -14,7 +14,7 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-- 🔭 I’m currently working on  **AWS, API's , .Net Core, Microservices**
+- 🔭 I’m currently working on  **.Net Core, Microservices, Azure,SQL, AWS, API's **
 
 <h3 align="left">Connect with me:</h3>
 <p align="left"> 
